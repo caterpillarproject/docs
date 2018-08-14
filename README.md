@@ -1,3 +1,5 @@
-# Caterpillar ReadTheDocs
+# Caterpillar Documentation
 
-This certainly is a work in progress.
+This is where the Caterpillar Project documentation lives.
+
+It is very much a work in progress. Be gentle.
