@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Usage Examples &mdash; Caterpillar Project Docs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using MIT’s Compute Cluster" href="doc_mit_cluster.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Caterpillar Project Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Project Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_history_motivation.html">History &amp; Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_project_status.html">Current Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="policies.html">Access &amp; Authorship Policies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Technical Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="doc_sims.html">Creating The Caterpillar Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_codes.html">Codes &amp; Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_sam_progress.html">Semi-analytic Models</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="docs_datasets.html">Available Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs_naming_conventions.html">Naming Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#loading-halo-catalogues">Loading Halo Catalogues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-merger-trees">Loading Merger Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-particle-data">Loading Particle Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="doc_mit_cluster.html">Using MIT’s Compute Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_mit_cluster.html#submitting-jobs">Submitting Jobs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Caterpillar Project Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Usage Examples</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/doc_data_access_examples.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="usage-examples">
+<h1>Usage Examples<a class="headerlink" href="#usage-examples" title="Permalink to this headline">¶</a></h1>
+<p>Here you’ll find all sorts of information about analysing the
+Caterpillar halos. If you still aren’t sure what to do after reading the documentation please send an email to <a class="reference external" href="mailto:brendan&#46;f&#46;griffen&#37;&#52;&#48;gmail&#46;com">Brendan
+Griffen</a>. Make sure you have
+setup your work environment correctly and obtained the necessary
+libraries.</p>
+<div class="section" id="loading-halo-catalogues">
+<h2>Loading Halo Catalogues<a class="headerlink" href="#loading-halo-catalogues" title="Permalink to this headline">¶</a></h2>
+<p>One example combining these two modules with some general inspection
+would look something like as follows:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">brendanlib.grifflib</span> <span class="k">as</span> <span class="nn">glib</span>
+<span class="kn">import</span> <span class="nn">haloutils</span> <span class="k">as</span> <span class="nn">htils</span>
+
+<span class="c1"># load the first 24 halos</span>
+<span class="c1"># (just change 14 to 11 for the lower resolution halos)</span>
+
+<span class="n">hpaths</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_paper_paths_lx</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="c1"># loop through all high-resolution halos</span>
+
+<span class="k">for</span> <span class="n">hpath</span> <span class="ow">in</span> <span class="n">hpaths</span><span class="p">:</span>
+
+    <span class="c1"># strip down the path to just the halo id</span>
+
+    <span class="n">parentid</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_parent_hid</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+    <span class="c1"># get the central host id of the zoom-in halo</span>
+    <span class="c1"># parentid is named from the parent simulation</span>
+    <span class="c1"># the zooms have different ids</span>
+
+    <span class="n">zoomid</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_zoomid</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+    <span class="c1"># Return the pandas data frame with all the halos,</span>
+    <span class="c1"># return mvir for example</span>
+
+    <span class="n">lastsnap</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_lastsnap</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+    <span class="n">halos</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_rscat</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">lastsnap</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">mvir_host</span> <span class="o">=</span> <span class="n">halos</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">zoomid</span><span class="p">][</span><span class="s1">&#39;mvir&#39;</span><span class="p">]</span> <span class="c1"># units of Msol/h</span>
+
+    <span class="c1"># get one specific parameter of the host at</span>
+    <span class="c1"># z = 0 (quick version of above)</span>
+
+    <span class="n">mvir_host</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_quant_zoom</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="s1">&#39;mvir&#39;</span><span class="p">)</span> <span class="c1"># units of Msol/h</span>
+
+    <span class="c1"># return all halo virial masses</span>
+
+    <span class="n">all_mvir</span> <span class="o">=</span> <span class="n">halos</span><span class="p">[</span><span class="s1">&#39;mvir&#39;</span><span class="p">]</span> <span class="c1"># units of Msol/h</span>
+
+    <span class="c1"># get the merger tree of the host and all its subs</span>
+
+    <span class="n">cat</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_mtc</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">haloids</span><span class="o">=</span><span class="p">[</span><span class="n">zoomid</span><span class="p">])</span>
+
+    <span class="c1"># read in every halo&#39;s merger tree</span>
+
+    <span class="n">all_trees</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_mtc</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">indexbyrsid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">all_trees</span><span class="p">[</span><span class="n">zoomid</span><span class="p">]</span>
+
+    <span class="c1"># if you feed more than one id to the above</span>
+    <span class="c1"># it would be cat[0],cat[1] etc.</span>
+
+    <span class="c1"># you can now access the main branch &gt; try tree. then tab complete to see other functions</span>
+    <span class="n">mainbranch</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getMainBranch</span><span class="p">()</span>
+
+    <span class="c1"># we also have a short hand version:</span>
+    <span class="c1"># mainbranch = htils.get_mainbranch(hpath)</span>
+    <span class="c1"># which is very fast and skips the reading of the entire progenitor tree if you don&#39;t need dit</span>
+    <span class="c1"># see further down this page for more options</span>
+    <span class="c1"># output the main branch virial mass</span>
+
+    <span class="nb">print</span> <span class="n">mainbranch</span><span class="p">[</span><span class="s1">&#39;mvir&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>As stated above, you can load a Rockstar catalogue for a given snapshot simply as:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rscat</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_rscat</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">snapshot</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Once you do this however, you will have access to the following methods:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">dir</span><span class="p">,</span> <span class="n">snap_num</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sort_by</span><span class="o">=</span><span class="s1">&#39;mvir&#39;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="s1">&#39;halos_&#39;</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">AllParticles</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">get_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">haloID</span><span class="p">):</span>
+      <span class="c1"># @param haloID: id number of halo. Not its row position in matrix</span>
+      <span class="c1"># @return: a list of particle IDs in the Halo</span>
+  <span class="k">def</span> <span class="nf">get_subhalos_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+      <span class="c1">#Retrieve subhalos only one level deep.</span>
+      <span class="c1">#Does not get sub-sub halos, etc.</span>
+  <span class="k">def</span> <span class="nf">get_subhalos_from_halos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloIDs</span><span class="p">):</span>
+      <span class="c1">#Returns an array of pandas data frames of subhalos. one data frame</span>
+      <span class="c1">#for each host halo. returns only first level of subhalos.</span>
+  <span class="k">def</span> <span class="nf">get_subhalos_from_halos_flat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloIDs</span><span class="p">):</span>
+      <span class="c1">#Returns a flattened pandas data frame of all subhalos within</span>
+      <span class="c1">#the hosts given by haloIDs. Returns only first level of subhalos.</span>
+  <span class="k">def</span> <span class="nf">get_hosts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="c1"># Get host halo frame only</span>
+  <span class="k">def</span> <span class="nf">get_subs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="c1"># Get subhalo frame only</span>
+  <span class="k">def</span> <span class="nf">get_all_subs_recurse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+      <span class="c1"># Retrieve all subhalos: sub and sub-sub, etc.</span>
+      <span class="c1"># just need mask of all subhalos, then return data frame subset</span>
+  <span class="k">def</span> <span class="nf">get_all_subhalos_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+      <span class="c1"># Retrieve all subhalos: sub and sub-sub, etc.</span>
+      <span class="c1"># return pandas data frame of subhalos</span>
+  <span class="k">def</span> <span class="nf">get_all_sub_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+      <span class="c1">#returns int array of particle IDs belonging to all substructure</span>
+      <span class="c1">#within host of haloID</span>
+  <span class="k">def</span> <span class="nf">get_all_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+      <span class="c1">#returns int array of all particles belonging to haloID</span>
+  <span class="k">def</span> <span class="nf">get_all_num_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+      <span class="c1"># Get the actual number of particles &#39;total_npart&#39; from halo as opposed to &#39;npart&#39;.</span>
+      <span class="c1"># mainly for versions less than 7</span>
+  <span class="k">def</span> <span class="nf">get_block_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">snapshot_dir</span><span class="p">,</span> <span class="n">haloID</span><span class="p">,</span> <span class="n">blockname</span><span class="p">,</span> <span class="n">allparticles</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+      <span class="c1"># quick load a block (hdf5 block) of particles belong to halo.</span>
+      <span class="c1"># e.g. you want particle positions for haloid = 10 (use blockname=&quot;pos&quot;)</span>
+      <span class="c1"># this works fastest on snapshots ordered by id and requires import readsnapHDF5_greg</span>
+  <span class="k">def</span> <span class="nf">H</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="c1">#returns hubble parameter for rockstar run</span>
+  <span class="k">def</span> <span class="nf">get_most_gravbound_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">snapshot_dir</span><span class="p">,</span> <span class="n">haloID</span><span class="p">):</span>
+      <span class="c1"># Gets most bound particles just based on potential energy for specific halo ID</span>
+  <span class="k">def</span> <span class="nf">get_most_bound_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">snapshot_dir</span><span class="p">,</span> <span class="n">haloID</span><span class="p">):</span>
+      <span class="c1"># Gets most bound particles for halo based on pot. energy and kin. energy</span>
+      <span class="c1"># if potential block does not exist, it is calculate assuming a spherical halo</span>
+  <span class="k">def</span> <span class="nf">getversion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="c1"># returns the version of rockstar the run was done within</span>
+      <span class="c1"># this will include versions made by Alex Ji, Greg Dooley &amp; Brendan Griffen</span>
+</pre></div>
+</div>
+<p>Here is an example of some of these in action:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># load required modules</span>
+
+<span class="kn">import</span> <span class="nn">haloutils</span> <span class="k">as</span> <span class="nn">htils</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># select Cat-1 halo</span>
+
+<span class="n">hpaths</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_paper_paths_lx</span><span class="p">(</span><span class="mi">14</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># select the last snapshot (z = 0)</span>
+<span class="n">snapshot</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_lastsnap</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="c1"># load rockstar id of the host halo</span>
+
+<span class="n">zoomid</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_zoomid</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="c1">#Load Halo Catalogue</span>
+
+<span class="n">halos</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_rscat</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">snapshot</span><span class="p">)</span>
+
+<span class="c1">#Select host halos</span>
+
+<span class="n">hosts</span> <span class="o">=</span> <span class="n">halos</span><span class="o">.</span><span class="n">get_hosts</span><span class="p">()</span>
+
+<span class="c1">#Select subhalos</span>
+
+<span class="n">subs</span> <span class="o">=</span> <span class="n">halos</span><span class="o">.</span><span class="n">get_subs</span><span class="p">()</span>
+
+<span class="c1"># Get positions of subs and hosts</span>
+
+<span class="nb">print</span> <span class="n">hosts</span><span class="p">[[</span><span class="s1">&#39;posX&#39;</span><span class="p">,</span><span class="s1">&#39;posY&#39;</span><span class="p">,</span><span class="s1">&#39;posZ&#39;</span><span class="p">]]</span>
+<span class="nb">print</span> <span class="n">subs</span><span class="p">[[</span><span class="s1">&#39;posX&#39;</span><span class="p">,</span><span class="s1">&#39;posY&#39;</span><span class="p">,</span><span class="s1">&#39;posZ&#39;</span><span class="p">]]</span>
+
+<span class="c1">#Get particle ids from halo of interest (here it is the host)</span>
+
+<span class="nb">print</span> <span class="n">halos</span><span class="o">.</span><span class="n">get_particles_from_halo</span><span class="p">(</span><span class="n">zoomid</span><span class="p">)</span>
+
+<span class="c1">#Get virial radius of a specific halo id (in this case the host)</span>
+
+<span class="nb">print</span> <span class="n">halos</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">zoomid</span><span class="p">][</span><span class="s1">&#39;rvir&#39;</span><span class="p">]</span> <span class="c1"># units of kpc/h</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loading-merger-trees">
+<h2>Loading Merger Trees<a class="headerlink" href="#loading-merger-trees" title="Permalink to this headline">¶</a></h2>
+<p>Similarly the merger tree catalogues (once loaded) have a number of its own functions.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getMainBranch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+   <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">   @param row: row of the halo you want the main branch for. Defaults to row 0</span>
+<span class="sd">   Uses getSubTree, then finds the smallest dfid that has no progenitors</span>
+<span class="sd">   @return: all halos that are in the main branch of the halo specified by row (in a np structured array)</span>
+<span class="sd">   &quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">getMMP</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
+   <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">   @param row: row number (int) of halo considered</span>
+<span class="sd">   @return: row number of the most massive parent, or None if no parent</span>
+<span class="sd">   &quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">getNonMMPprogenitors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">row</span><span class="p">):</span>
+   <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">   return row index of all progenitors that are not the most massive</span>
+<span class="sd">   These are all the subhalos that were destroyed in the interval</span>
+<span class="sd">   &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>These can be used in the following example:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># load required modules</span>
+
+<span class="kn">import</span> <span class="nn">haloutils</span> <span class="k">as</span> <span class="nn">htils</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># select the caterpillar halo of interest</span>
+<span class="c1"># based on halo id and resolution level</span>
+
+<span class="n">hid</span> <span class="o">=</span> <span class="mi">1387186</span>
+<span class="n">lx</span> <span class="o">=</span> <span class="mi">14</span>
+
+<span class="n">hpath</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">hid_hpath_lx</span><span class="p">(</span><span class="n">hid</span><span class="p">,</span><span class="n">lx</span><span class="p">)</span>
+
+<span class="c1"># select the last snapshot (z = 0)</span>
+<span class="n">snapshot</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_lastsnap</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="c1"># load rockstar id of the host halo</span>
+
+<span class="n">zoomid</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_zoomid</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="c1"># Load every tree (VERY slow)</span>
+
+<span class="n">trees</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_mtc</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="c1"># Just look at the first tree</span>
+<span class="c1"># tree = cat[0]</span>
+<span class="c1"># You can access all trees via: cat[0], cat[1] etc.</span>
+
+<span class="c1"># If you want to load the tree for a particular ID from the rockstar catalogue</span>
+
+<span class="n">trees</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_mtc</span><span class="p">(</span><span class="n">haloids</span><span class="o">=</span><span class="p">[</span><span class="n">zoomid</span><span class="p">])</span> <span class="c1"># in this case the host (quite slow)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># tree will contain all progenitors, including subhalos</span>
+
+<span class="c1"># Just say you want to index the merger tree by the z = 0 root rockstar id</span>
+<span class="c1"># (i.e. the base of the tree). This is quite powerful because you might select</span>
+<span class="c1"># halos of interest in the rockstar catalogue then want to know, just for those</span>
+<span class="c1"># what their merger tree is (e.g. say you just want dwarf systems of a particular size)</span>
+
+<span class="n">trees</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_mtc</span><span class="p">(</span><span class="n">haloids</span><span class="o">=</span><span class="p">[</span><span class="n">zoomid</span><span class="p">],</span><span class="n">indexbyrsid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">trees</span><span class="p">[</span><span class="n">zoomid</span><span class="p">]</span>
+
+<span class="c1"># You can just loop through rockstar ids (if you gave it more than one id above)</span>
+<span class="c1"># and get out the accretion histories for a small sample of trees quite quickly</span>
+
+<span class="c1"># to get the main branch</span>
+
+<span class="n">main_branch</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getMainBranch</span><span class="p">()</span>
+
+<span class="c1"># print mass evolution</span>
+<span class="k">for</span> <span class="n">mass</span><span class="p">,</span><span class="n">scale</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">main_branch</span><span class="p">[</span><span class="s1">&#39;mvir&#39;</span><span class="p">],</span><span class="n">main_branch</span><span class="p">[</span><span class="s1">&#39;scale&#39;</span><span class="p">]):</span>
+   <span class="nb">print</span> <span class="s2">&quot;</span><span class="si">%3.2f</span><span class="s2">: </span><span class="si">%3.2e</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">scale</span><span class="p">,</span><span class="n">mass</span><span class="p">)</span>
+
+<span class="c1"># output</span>
+<span class="mf">1.00</span><span class="p">:</span> <span class="mf">2.86e+14</span>
+<span class="mf">0.99</span><span class="p">:</span> <span class="mf">2.89e+14</span>
+<span class="mf">0.98</span><span class="p">:</span> <span class="mf">2.90e+14</span>
+<span class="mf">0.97</span><span class="p">:</span> <span class="mf">2.90e+14</span>
+<span class="mf">0.95</span><span class="p">:</span> <span class="mf">2.88e+14</span>
+<span class="mf">0.94</span><span class="p">:</span> <span class="mf">2.86e+14</span>
+<span class="mf">0.93</span><span class="p">:</span> <span class="mf">2.83e+14</span>
+<span class="mf">0.92</span><span class="p">:</span> <span class="mf">2.80e+14</span>
+<span class="mf">0.91</span><span class="p">:</span> <span class="mf">2.76e+14</span>
+<span class="mf">0.90</span><span class="p">:</span> <span class="mf">2.73e+14</span>
+<span class="mf">0.89</span><span class="p">:</span> <span class="mf">2.64e+14</span>
+<span class="mf">0.88</span><span class="p">:</span> <span class="mf">2.47e+14</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>A function to find the descendent branch of any halo in merger tree
+catalogue. You should use it as follows:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># get a tree of interest</span>
+<span class="n">mtc</span> <span class="o">=</span> <span class="n">haloutils</span><span class="o">.</span><span class="n">load_zoom_mtc</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+<span class="n">host</span> <span class="o">=</span> <span class="n">mtc</span><span class="o">.</span><span class="n">Trees</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># make a dictionary that maps ids to rows</span>
+<span class="n">desc_map</span> <span class="o">=</span> <span class="n">host</span><span class="o">.</span><span class="n">get_desc_map</span><span class="p">()</span>
+
+<span class="c1"># get the descendent branch.</span>
+<span class="n">desc_branch</span> <span class="o">=</span> <span class="n">host</span><span class="o">.</span><span class="n">getDescBranch</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">desc_map</span><span class="p">)</span>
+
+<span class="c1"># similarly for main branches, you can use a dictionary that speeds up the</span>
+<span class="c1"># getMainBranch call substantially.</span>
+<span class="n">mmp_map</span> <span class="o">=</span> <span class="n">host</span><span class="o">.</span><span class="n">get_mmp_map</span><span class="p">()</span>
+<span class="n">main_branch</span> <span class="o">=</span> <span class="n">host</span><span class="o">.</span><span class="n">getMainBranch</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">mmp_map</span><span class="p">)</span>
+
+<span class="c1"># you can get the branches without making the map as below, but they will be much slower.</span>
+<span class="c1"># only faster if you use ~ &lt; 10 calls to the function.</span>
+<span class="n">desc_branch</span> <span class="o">=</span> <span class="n">host</span><span class="o">.</span><span class="n">getDescBranch</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="n">main_branch</span> <span class="o">=</span> <span class="n">host</span><span class="o">.</span><span class="n">getMainBranch</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loading-particle-data">
+<h2>Loading Particle Data<a class="headerlink" href="#loading-particle-data" title="Permalink to this headline">¶</a></h2>
+<p>If you want the Gadget header:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the first halo in the catalogue</span>
+
+<span class="n">hpaths</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_paper_paths_lx</span><span class="p">(</span><span class="mi">14</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># read its Gadget header</span>
+<span class="n">header</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_halo_header</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="c1"># header contains the typical Gadget info</span>
+<span class="n">header</span><span class="o">.</span><span class="n">boxsize</span>        <span class="n">header</span><span class="o">.</span><span class="n">massarr</span>        <span class="n">header</span><span class="o">.</span><span class="n">omegaL</span>
+<span class="n">header</span><span class="o">.</span><span class="n">cooling</span>        <span class="n">header</span><span class="o">.</span><span class="n">metals</span>         <span class="n">header</span><span class="o">.</span><span class="n">redshift</span>
+<span class="n">header</span><span class="o">.</span><span class="n">double</span>         <span class="n">header</span><span class="o">.</span><span class="n">nall</span>           <span class="n">header</span><span class="o">.</span><span class="n">sfr</span>
+<span class="n">header</span><span class="o">.</span><span class="n">feedback</span>       <span class="n">header</span><span class="o">.</span><span class="n">nall_highword</span>  <span class="n">header</span><span class="o">.</span><span class="n">stellar_age</span>
+<span class="n">header</span><span class="o">.</span><span class="n">filenum</span>        <span class="n">header</span><span class="o">.</span><span class="n">npart</span>          <span class="n">header</span><span class="o">.</span><span class="n">time</span>
+<span class="n">header</span><span class="o">.</span><span class="n">hubble</span>         <span class="n">header</span><span class="o">.</span><span class="n">omega0</span>
+</pre></div>
+</div>
+<p>Be sure to divide the relevant quantities (pos, rvir etc.) by
+<code class="docutils literal notranslate"><span class="pre">header.hubble</span></code>. See the Gadget section in the sidebar for more
+information on the header and block types available.</p>
+<p>If you wanted to get the postions of all the particles for a specific
+halo (or any block).</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pos</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_partblock</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">zoomid</span><span class="p">,</span><span class="s2">&quot;POS &quot;</span><span class="p">)</span> <span class="c1"># units Mpc/h</span>
+<span class="c1"># &quot;VEL &quot;, &quot;ID  &quot;, &quot;MASS&quot; etc. also work (notice the space)</span>
+<span class="c1"># check readsnapshots/readsnapHDF5.py for the other block names</span>
+<span class="c1"># you can call in the caterpillar modules</span>
+
+<span class="nb">print</span> <span class="n">pos</span><span class="o">*</span><span class="mf">1000.</span> <span class="c1"># kpc/h</span>
+
+<span class="c1"># output</span>
+<span class="p">[</span> <span class="mf">32085.45117188</span>  <span class="mf">57312.79296875</span>  <span class="mf">44314.35546875</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">27002.18554688</span>  <span class="mf">10062.73242188</span>   <span class="mf">9899.70019531</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">26711.08789062</span>   <span class="mf">9560.22460938</span>  <span class="mf">10165.18847656</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">49757.3515625</span>   <span class="mf">21470.00195312</span>   <span class="mf">6461.90917969</span><span class="p">]</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>If you want to read in the entire block, use the following:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">haloutils</span> <span class="k">as</span> <span class="nn">htils</span>
+
+<span class="n">hid</span> <span class="o">=</span> <span class="mi">1387186</span>
+<span class="n">lx</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">hpath</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">hid_hpath_lx</span><span class="p">(</span><span class="n">hid</span><span class="p">,</span><span class="n">lx</span><span class="p">)</span>
+
+<span class="n">pos</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_partblock</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="mi">319</span><span class="p">,</span><span class="s2">&quot;POS &quot;</span><span class="p">)</span>
+<span class="n">mass</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_partblock</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="mi">319</span><span class="p">,</span><span class="s2">&quot;MASS&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that the mass block will have different values depending on how
+many layers of refinement there are for that zoom in simulation. If you
+use this code on a parent simulation it will be an array of length N all
+of the same value because there is only one particle type.</p>
+<p>If you wanted just the ids for a selection of particle ids:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pos</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_partblock</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">zoomid</span><span class="p">,</span><span class="s2">&quot;POS &quot;</span><span class="p">,</span><span class="n">partids</span><span class="o">=</span><span class="p">[</span><span class="n">listofids</span><span class="p">])</span> <span class="c1"># units Mpc/h</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="doc_mit_cluster.html" class="btn btn-neutral float-right" title="Using MIT’s Compute Cluster" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting_started.html" class="btn btn-neutral" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Caterpillar Collaboration.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

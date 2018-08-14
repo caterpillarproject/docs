@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Initial Conditions &mdash; Caterpillar Project Docs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Caterpillar Project Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Project Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_history_motivation.html">History &amp; Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_project_status.html">Current Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../policies.html">Access &amp; Authorship Policies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Technical Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc_sims.html">Creating The Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_codes.html">Codes &amp; Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_sam_progress.html">Semi-analytic Models</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../docs_datasets.html">Available Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs_naming_conventions.html">Naming Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_data_access_examples.html">Usage Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_mit_cluster.html">Using MIT’s Compute Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_mit_cluster.html#submitting-jobs">Submitting Jobs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caterpillar Project Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Initial Conditions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/original/doc_initial_conditions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="initial-conditions">
+<h1>Initial Conditions<a class="headerlink" href="#initial-conditions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>We use the multi-scale cosmological initial conditions creator MUSIC.
+MUSIC is a computer program to generate nested grid initial conditions
+for high-resolution “zoom” cosmological simulations. A detailed
+description of the algorithms can be found in Hahn &amp; Abel (2011). You
+can download the user’s guide
+<a class="reference external" href="https://bitbucket.org/ohahn/music/downloads/MUSIC_Users_Guide.pdf">here</a>
+or obtain a copy of the code
+<a class="reference external" href="https://people.phys.ethz.ch/~hahn/MUSIC/">here</a>. Any questions
+should be directed to <a class="reference external" href="mailto:brendan&#46;f&#46;griffen&#37;&#52;&#48;gmail&#46;com">Brendan Griffen</a>
+and then if that fails, <a class="reference external" href="mailto:hahn&#37;&#52;&#48;phys&#46;ethz&#46;ch">Oliver Hahn</a>.</p>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>These are the parameter files which were used to generate the initial
+coditions for the <em>Caterpillar</em> project. We adopt the raw Planck (2013)
+cosmology and do not use 2nd order lagrangian perturbation theory. The
+<a class="reference external" href="https://bitbucket.org/ohahn/music/downloads/MUSIC_Users_Guide.pdf">user
+guide</a>
+contains all the information required to understand the following
+parameter files. Within each simulation directory, there is a file named
+<code class="docutils literal notranslate"><span class="pre">OUTPUTmusic</span></code> which gives the log of the construction of the initial
+conditions.</p>
+<div class="section" id="parent-simulation">
+<h3>Parent Simulation<a class="headerlink" href="#parent-simulation" title="Permalink to this headline">¶</a></h3>
+<p>First we constructed a parent simulation of sufficient size to include
+thousands of Milky Way sized systems but also of sufficient resolution
+to construct good lagrangian volumes. We decided on ~10,000 particles
+per Milky Way-sized host and a 100 Mpc/h volume. Our <code class="docutils literal notranslate"><span class="pre">level_max</span></code> is 10
+below, which means our parent simulation’s effective resolution is
+(210)3 = (1024)3 (i.e. a particle mass of 8.72 x 107
+\(M_:raw-latex:<cite>odot</cite>/h\).</p>
+<p>If you have access to the MIT cluster (<code class="docutils literal notranslate"><span class="pre">bigbang.mit.edu</span></code>), you can
+access the parent simulation data here:
+<code class="docutils literal notranslate"><span class="pre">/bigbang/data/AnnaGroup/caterpillar/parent/gL100X10/</span></code>. Within this
+folder you’ll find the following file (within <code class="docutils literal notranslate"><span class="pre">ics/</span></code>):</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># parentics.conf</span>
+<span class="p">[</span><span class="n">setup</span><span class="p">]</span>
+<span class="n">boxlength</span>               <span class="o">=</span> <span class="mi">100</span>
+<span class="n">zstart</span>                  <span class="o">=</span> <span class="mi">127</span>
+<span class="n">levelmin</span>                <span class="o">=</span> <span class="mi">10</span>
+<span class="n">levelmin_TF</span>             <span class="o">=</span> <span class="mi">10</span>
+<span class="n">levelmax</span>                <span class="o">=</span> <span class="mi">10</span>
+<span class="n">padding</span>                 <span class="o">=</span> <span class="mi">8</span>
+<span class="n">overlap</span>                 <span class="o">=</span> <span class="mi">4</span>
+<span class="n">ref_center</span>              <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span>
+<span class="n">ref_extent</span>              <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span>
+<span class="n">align_top</span>               <span class="o">=</span> <span class="n">yes</span>
+<span class="n">baryons</span>                 <span class="o">=</span> <span class="n">no</span>
+<span class="n">use_2LPT</span>                <span class="o">=</span> <span class="n">no</span>
+<span class="n">use_LLA</span>                 <span class="o">=</span> <span class="n">no</span>
+<span class="n">periodic_TF</span>             <span class="o">=</span> <span class="n">yes</span>
+
+<span class="p">[</span><span class="n">cosmology</span><span class="p">]</span>
+<span class="n">Omega_m</span>                 <span class="o">=</span> <span class="mf">0.3175</span>
+<span class="n">Omega_L</span>                 <span class="o">=</span> <span class="mf">0.6825</span>
+<span class="n">Omega_b</span>                 <span class="o">=</span> <span class="mf">0.049</span>
+<span class="n">H0</span>                      <span class="o">=</span> <span class="mf">67.11</span>
+<span class="n">sigma_8</span>                 <span class="o">=</span> <span class="mf">0.8344</span>
+<span class="n">nspec</span>                   <span class="o">=</span> <span class="mf">0.9624</span>
+<span class="n">transfer</span>                <span class="o">=</span> <span class="n">eisenstein</span>
+
+<span class="p">[</span><span class="n">random</span><span class="p">]</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>                <span class="o">=</span> <span class="mi">34567</span>
+
+<span class="p">[</span><span class="n">output</span><span class="p">]</span>
+<span class="nb">format</span>                  <span class="o">=</span> <span class="n">gadget2</span>
+<span class="n">filename</span>                <span class="o">=</span> <span class="o">./</span><span class="n">ics</span>
+<span class="n">gadget_num_files</span>        <span class="o">=</span> <span class="mi">128</span>
+
+<span class="p">[</span><span class="n">poisson</span><span class="p">]</span>
+<span class="n">fft_fine</span>                <span class="o">=</span> <span class="n">yes</span>
+<span class="n">accuracy</span>                <span class="o">=</span> <span class="mf">1e-5</span>
+<span class="n">pre_smooth</span>              <span class="o">=</span> <span class="mi">3</span>
+<span class="n">post_smooth</span>             <span class="o">=</span> <span class="mi">3</span>
+<span class="n">smoother</span>                <span class="o">=</span> <span class="n">gs</span>
+<span class="n">laplace_order</span>           <span class="o">=</span> <span class="mi">6</span>
+<span class="n">grad_order</span>              <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="zoom-simulations">
+<h3>Zoom Simulations<a class="headerlink" href="#zoom-simulations" title="Permalink to this headline">¶</a></h3>
+<p>Each simulation folder has a configuration file for MUSIC (e.g.
+<code class="docutils literal notranslate"><span class="pre">H1079897_EX_Z127_P7_LN7_LX14_O4_NV4.conf</span></code>) which was used to
+construct the initial conditions.</p>
+<p>There are a few things to note about the zoom-in paramter files when
+compared to the parent volume parameter file. First is we now specify a
+<code class="docutils literal notranslate"><span class="pre">region_point_file</span></code> which defines the x,y,z (normalized to the box
+width) of the particles to be resampled. We have added the parameter
+<code class="docutils literal notranslate"><span class="pre">hipadding</span></code> which our own modification to allow for expanded regions.
+1.05, for example, represents an expanded ellipsoid (by 5%). See Section
+2.3 of <a class="reference external" href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1509.01255">Griffen et al.
+(2015)</a>
+for a more detailed description of these geometries and their impact on
+contamination.</p>
+<p>We also draw the reader’s attention to the seed values. Note that we do
+not set the seed values for any level lower than the parent volume (10)
+which makes MUSIC smooth out any levels lower than 10. The seed values
+at 11 are simply the halo numbers and then each level higher scales by a
+factor of 2 of this original number. This was required because the ICs
+were generated through our automatic pipeline and each simulation needs
+unique values to seed the random noise field. The <code class="docutils literal notranslate"><span class="pre">levelmin_TF</span></code> is
+also set to be the same as the parent volume (10). The padding and
+overlap parameters are the same for all simulations.</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># H1079897_EX_Z127_P7_LN7_LX14_O4_NV4.conf</span>
+<span class="p">[</span><span class="n">setup</span><span class="p">]</span>
+<span class="n">boxlength</span>            <span class="o">=</span> <span class="mi">100</span>
+<span class="n">zstart</span>               <span class="o">=</span> <span class="mi">127</span>
+<span class="n">levelmin</span>             <span class="o">=</span> <span class="mi">7</span>
+<span class="n">levelmin_TF</span>          <span class="o">=</span> <span class="mi">10</span>
+<span class="n">levelmax</span>             <span class="o">=</span> <span class="mi">14</span>
+<span class="n">padding</span>              <span class="o">=</span> <span class="mi">7</span>
+<span class="n">overlap</span>              <span class="o">=</span> <span class="mi">4</span>
+<span class="n">region</span>               <span class="o">=</span> <span class="n">ellipsoid</span>
+<span class="n">hipadding</span>            <span class="o">=</span> <span class="mf">1.05</span>
+<span class="n">region_point_file</span>    <span class="o">=</span> <span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="n">home01</span><span class="o">/</span><span class="n">bgriffen</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">caterpillar</span><span class="o">/</span><span class="n">ics</span><span class="o">/</span><span class="n">lagr</span><span class="o">/</span><span class="n">H1079897NRVIR4</span>
+<span class="n">align_top</span>            <span class="o">=</span> <span class="n">no</span>
+<span class="n">baryons</span>              <span class="o">=</span> <span class="n">no</span>
+<span class="n">use_2LPT</span>             <span class="o">=</span> <span class="n">no</span>
+<span class="n">use_2LLA</span>             <span class="o">=</span> <span class="n">no</span>
+<span class="n">periodic_TF</span>          <span class="o">=</span> <span class="n">yes</span>
+
+<span class="p">[</span><span class="n">cosmology</span><span class="p">]</span>
+<span class="n">Omega_m</span>              <span class="o">=</span> <span class="mf">0.3175</span>
+<span class="n">Omega_L</span>              <span class="o">=</span> <span class="mf">0.6825</span>
+<span class="n">Omega_b</span>              <span class="o">=</span> <span class="mf">0.049</span>
+<span class="n">H0</span>                   <span class="o">=</span> <span class="mf">67.11</span>
+<span class="n">sigma_8</span>              <span class="o">=</span> <span class="mf">0.8344</span>
+<span class="n">nspec</span>                <span class="o">=</span> <span class="mf">0.9624</span>
+<span class="n">transfer</span>             <span class="o">=</span> <span class="n">eisenstein</span>
+
+<span class="p">[</span><span class="n">random</span><span class="p">]</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>              <span class="o">=</span> <span class="mi">34567</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span>              <span class="o">=</span> <span class="mi">1079897</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span>              <span class="o">=</span> <span class="mi">2159794</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span>              <span class="o">=</span> <span class="mi">3239691</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span>              <span class="o">=</span> <span class="mi">4319588</span>
+
+<span class="p">[</span><span class="n">output</span><span class="p">]</span>
+<span class="nb">format</span>               <span class="o">=</span> <span class="n">gadget2_double</span>
+<span class="n">filename</span>             <span class="o">=</span> <span class="o">./</span><span class="n">ics</span>
+<span class="n">gadget_num_files</span>     <span class="o">=</span> <span class="mi">8</span>
+<span class="n">gadget_spreadcoarse</span>  <span class="o">=</span> <span class="n">yes</span>
+
+<span class="p">[</span><span class="n">poisson</span><span class="p">]</span>
+<span class="n">fft_fine</span>             <span class="o">=</span> <span class="n">yes</span>
+<span class="n">accuracy</span>             <span class="o">=</span> <span class="mf">1e-05</span>
+<span class="n">pre_smooth</span>           <span class="o">=</span> <span class="mi">3</span>
+<span class="n">post_smooth</span>          <span class="o">=</span> <span class="mi">3</span>
+<span class="n">smoother</span>             <span class="o">=</span> <span class="n">gs</span>
+<span class="n">laplace_order</span>        <span class="o">=</span> <span class="mi">6</span>
+<span class="n">grad_order</span>           <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Caterpillar Collaboration.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

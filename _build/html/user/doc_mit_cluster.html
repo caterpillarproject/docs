@@ -1,0 +1,535 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using MIT’s Compute Cluster &mdash; Caterpillar Project Docs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Caterpillar Project Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Project Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../policies.html">Access &amp; Authorship Policies</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caterpillar Project Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Using MIT’s Compute Cluster</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user/doc_mit_cluster.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-mit-s-compute-cluster">
+<h1>Using MIT’s Compute Cluster<a class="headerlink" href="#using-mit-s-compute-cluster" title="Permalink to this headline">¶</a></h1>
+<p>The MKI cluster (with respect to Caterpillar) at MIT has one login node
+(<code class="docutils literal notranslate"><span class="pre">antares.mit.edu</span></code>) which connects to a three primary blocks of slave
+nodes and one analysis node (<code class="docutils literal notranslate"><span class="pre">bigbang.mit.edu</span></code>).</p>
+<center></center><div class="section" id="compute-nodes">
+<h2>Compute Nodes<a class="headerlink" href="#compute-nodes" title="Permalink to this headline">¶</a></h2>
+<p>These nodes are accessed through  <cite>antares.mit.edu (for farming jobs)</cite>.</p>
+<div class="section" id="regnodes">
+<h3>RegNodes<a class="headerlink" href="#regnodes" title="Permalink to this headline">¶</a></h3>
+<p>Block 1: * 22 nodes (176 cores) * 8 core [2 Ghz] * 16GB memory * 1
+Gbit interconnect</p>
+<p>Block 2: * 9 nodes (72 cores) * 8 cores, 2.5 Ghz * 16GB memory * 1
+Gbit interconnect</p>
+<p>This partition should be used for <em>serial jobs</em>. All nodes can be
+accessed via using the partition <code class="docutils literal notranslate"><span class="pre">RegNodes</span></code>.</p>
+</div>
+<div class="section" id="hypernodes">
+<h3>HyperNodes<a class="headerlink" href="#hypernodes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>12 nodes (144 cores)</li>
+<li>12 cores, 2.3 Ghz (24 with hyper-threading)</li>
+<li>24GB memory</li>
+<li>10 Gbit interconnect</li>
+</ul>
+<p>This partition should only be used for <em>MPI enabled</em> codes as it has
+faster interconnect.</p>
+</div>
+<div class="section" id="amd64">
+<h3>AMD64<a class="headerlink" href="#amd64" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>8 nodes, 512 cores</li>
+<li>64 cores, 2.2 Ghz</li>
+<li>256GB memory</li>
+<li>10 Gbit interconnect</li>
+</ul>
+<p>This partition should <em>only be used for extremely expensive runs which
+require 100GB++ memory and for codes that are MPI enabled</em>. You can also
+used openMP multi-threaded jobs which require large amounts of memory (1
+job per node). At this stage, there are no time-limits or fixed memory
+limits for each of the nodes.</p>
+</div>
+</div>
+<div class="section" id="analysis-nodes">
+<h2>Analysis Nodes<a class="headerlink" href="#analysis-nodes" title="Permalink to this headline">¶</a></h2>
+<p>The two analysis nodes are Bigbang and Blender.</p>
+<p>The Frebel group as MIT also has access to an analysis node which is connected to the Caterpillar data called <code class="docutils literal notranslate"><span class="pre">bigbang</span></code>. It can be accessed via ssh <code class="docutils literal notranslate"><span class="pre">username&#64;bigbang.mit.edu</span></code>. See Data Access on this site to get started with your analysis once you understand the storage layout below.</p>
+<div class="section" id="storage-file-systems-servers">
+<h3>Storage File Systems/Servers<a class="headerlink" href="#storage-file-systems-servers" title="Permalink to this headline">¶</a></h3>
+<p>The Frebel group has access to ~120GB RAID storage and 300TB+ of ZFS
+tape storage. The ZFS tape storage consists of two 130TB servers
+(<code class="docutils literal notranslate"><span class="pre">grinder</span></code> and <code class="docutils literal notranslate"><span class="pre">cruncher</span></code>). These are significantly slower to do I/O
+from <em>the first time</em>. They each have solid state drives on them acting
+as a large cache which makes reading data comparable to the RAID drives
+if you are repeatedly accessing the same snapshot on the tape, for
+example. The directory structure is as follows:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">login</span> <span class="n">node</span><span class="p">:</span> <span class="n">ssh</span> <span class="n">username</span><span class="nd">@bigbang</span><span class="o">.</span><span class="n">mit</span><span class="o">.</span><span class="n">edu</span>
+
+<span class="c1"># ZFS TAPE STORAGE SERVERS (not as fast as the RAID  slow to load)</span>
+ <span class="o">-&gt;</span> <span class="n">cruncher</span><span class="o">/</span>
+  <span class="o">-&gt;</span> <span class="n">caterpillar</span><span class="o">/</span>
+   <span class="o">-&gt;</span> <span class="n">parent</span><span class="o">/</span>
+   <span class="o">-&gt;</span> <span class="n">halos</span><span class="o">/</span>
+    <span class="o">-&gt;</span> <span class="n">H1079897</span><span class="o">/</span>
+
+ <span class="o">-&gt;</span> <span class="n">grinder</span><span class="o">/</span>  <span class="c1"># ZFS tape drive with</span>
+  <span class="o">-&gt;</span> <span class="n">caterpillar</span><span class="o">/</span>
+   <span class="o">-&gt;</span> <span class="n">halos</span><span class="o">/</span>
+    <span class="o">-&gt;</span> <span class="n">H1387186</span>
+    <span class="o">...</span>
+  <span class="o">-&gt;</span> <span class="n">aquarius</span><span class="o">/</span>
+   <span class="o">-&gt;</span> <span class="n">Aq</span><span class="o">-</span><span class="n">A</span><span class="o">/</span>
+   <span class="o">-&gt;</span> <span class="n">Aq</span><span class="o">-</span><span class="n">B</span><span class="o">/</span>
+   <span class="o">-&gt;</span> <span class="n">Aq</span><span class="o">-</span><span class="n">C</span><span class="o">/</span>
+   <span class="o">-&gt;</span> <span class="n">Aq</span><span class="o">-</span><span class="n">D</span><span class="o">/</span>
+   <span class="o">-&gt;</span> <span class="n">Aq</span><span class="o">-</span><span class="n">E</span><span class="o">/</span>
+   <span class="o">-&gt;</span> <span class="n">Aq</span><span class="o">-</span><span class="n">F</span><span class="o">/</span>
+
+<span class="c1"># RAID STORAGE</span>
+ <span class="o">-&gt;</span> <span class="n">data</span><span class="o">/</span><span class="n">AnnaGroup</span><span class="o">/</span>     <span class="c1"># RAID drive with all runs lower than LX14</span>
+  <span class="o">-&gt;</span> <span class="n">caterpillar</span><span class="o">/</span>
+   <span class="o">-&gt;</span> <span class="n">halos</span><span class="o">/</span>            <span class="c1"># master folder with all of the caterpillar data within</span>
+    <span class="o">-&gt;</span> <span class="n">H1079897</span><span class="o">/</span>        <span class="c1"># halos are named according to their folders</span>
+    <span class="o">...</span>
+   <span class="o">-&gt;</span> <span class="n">ics</span><span class="o">/</span>
+    <span class="o">-&gt;</span> <span class="n">lagr</span><span class="o">/</span>            <span class="c1"># lagrangian volume files</span>
+   <span class="o">-&gt;</span> <span class="n">parent</span><span class="o">/</span>           <span class="c1"># parent simulation runs</span>
+    <span class="o">-&gt;</span> <span class="n">gL100X10</span><span class="o">/</span>        <span class="c1"># actual parent simulation (X10 refers to Level_max=10 in MUSIC)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="current-storage-options">
+<h2>Current Storage Options<a class="headerlink" href="#current-storage-options" title="Permalink to this headline">¶</a></h2>
+<p>We are quite limited with storage space and so we ask you to request
+more storage if you need it. You will then be allocated a directory on
+<code class="docutils literal notranslate"><span class="pre">bigbang/data/{username}/</span></code>. The current break down of the storage
+capability is as follows:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bigbang</span><span class="o">%</span> <span class="n">df</span> <span class="o">-</span><span class="n">h</span>
+<span class="n">Filesystem</span>            <span class="n">Size</span>  <span class="n">Used</span> <span class="n">Avail</span> <span class="n">Use</span><span class="o">%</span> <span class="n">Mounted</span> <span class="n">on</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">mapper</span><span class="o">/</span><span class="n">vg_bigbang</span><span class="o">-</span><span class="n">lv_home</span>
+                       <span class="mi">57</span><span class="n">G</span>  <span class="mf">1.9</span><span class="n">G</span>   <span class="mi">52</span><span class="n">G</span>   <span class="mi">4</span><span class="o">%</span> <span class="o">/</span><span class="n">home</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">mapper</span><span class="o">/</span><span class="n">vg_bigdata</span><span class="o">-</span><span class="n">lv_bigdata</span>
+                      <span class="mi">121</span><span class="n">T</span>   <span class="mi">93</span><span class="n">T</span>   <span class="mi">28</span><span class="n">T</span>  <span class="mi">78</span><span class="o">%</span> <span class="o">/</span><span class="n">bigbang</span><span class="o">/</span><span class="n">data</span>
+<span class="o">/</span><span class="n">cruncher</span><span class="o">/</span><span class="n">data</span>
+                      <span class="mi">127</span><span class="n">T</span>  <span class="mi">114</span><span class="n">T</span>   <span class="mi">14</span><span class="n">T</span>  <span class="mi">90</span><span class="o">%</span> <span class="o">/</span><span class="n">cruncher</span><span class="o">/</span><span class="n">data</span>
+<span class="o">/</span><span class="n">grinder</span><span class="o">/</span><span class="n">data</span>
+                      <span class="mi">127</span><span class="n">T</span>   <span class="mi">74</span><span class="n">T</span>   <span class="mi">54</span><span class="n">T</span>  <span class="mi">59</span><span class="o">%</span> <span class="o">/</span><span class="n">grinder</span><span class="o">/</span><span class="n">data</span>
+<span class="o">/</span><span class="n">spacebase</span><span class="o">/</span><span class="n">data</span>
+                       <span class="mi">36</span><span class="n">T</span>   <span class="mi">33</span><span class="n">M</span>   <span class="mi">36</span><span class="n">T</span>   <span class="mi">1</span><span class="o">%</span> <span class="o">/</span><span class="n">spacebase</span><span class="o">/</span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="where-is-the-data-actually-stored">
+<h2>Where is the data <em>actually</em> stored?<a class="headerlink" href="#where-is-the-data-actually-stored" title="Permalink to this headline">¶</a></h2>
+<p>Due to our storage limitations we have opted for the following strategy</p>
+<ul class="simple">
+<li>you should only ever get your hpaths from haloutils via
+<code class="docutils literal notranslate"><span class="pre">hpaths</span> <span class="pre">=</span> <span class="pre">haloutils.get_paper_paths_lx(14)</span></code>, for example. Do not
+get your halo paths from ever going into
+<code class="docutils literal notranslate"><span class="pre">caterpillar/halos/middle_mass_halos/*</span></code>.</li>
+<li>all simulation runs lower than LX14 (i.e. LX11,12,13) have been
+stored on the RAID drives.</li>
+<li>all LX14 runs are <em>symbolically linked</em> on the RAID drives but might
+not actually exist physically on the drives.</li>
+<li>all halo catalogues are on the RAID drives so access for these is
+very fast</li>
+<li>all particle data <em>except</em> the last snapshot are actually stored on
+the ZFS tape drives (though it will appear in outputs/ as a symlink)</li>
+<li>only the last snapshot of the particle data is actually stored on the
+RAID drives</li>
+<li>all postprocessed catalogues in <code class="docutils literal notranslate"><span class="pre">analysis/</span></code> of each halo directory
+are on the RAID drives</li>
+<li>all of the aquarius data is on the ZFS tape storage as this is not
+often used</li>
+<li>the parent simulation (<code class="docutils literal notranslate"><span class="pre">gL100X10</span></code>) is stored in the same way as the
+LX14 runs: only the last snapshot of the particle data is stored on
+the RAID drives, everything else is on the ZFS tape drives.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submitting-jobs">
+<h1>Submitting Jobs<a class="headerlink" href="#submitting-jobs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example-slurm-submission-scripts">
+<h2>Example SLURM Submission Scripts<a class="headerlink" href="#example-slurm-submission-scripts" title="Permalink to this headline">¶</a></h2>
+<p>Scripts can be submitted via using the command <code class="docutils literal notranslate"><span class="pre">sbatch</span> <span class="pre">sub.script</span></code>.
+There are a number of options you can specify but the key ones are
+listed here.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-n</span> <span class="pre">1</span></code> This line sets the number of cores that you’re
+requesting. Make sure that your tool can use multiple cores before
+requesting more than one.</li>
+<li><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-t</span> <span class="pre">5</span></code> This line specifies the running time for the job in
+minutes. If your job runs longer than the value you specify here, it
+will be cancelled. There is currently no time limit to jobs so you
+can leave this out for now.</li>
+<li><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-p</span> <span class="pre">RegNodes</span></code> This line specifies the SLURM partition (AKA
+queue) under which the script will be run. The RegNodes partition is
+good for routine jobs that can handle being occasionally stopped and
+restarted. PENDING times are typically short for this queue as it has
+the most number of cores.</li>
+<li><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-o</span> <span class="pre">hostname.out</span></code> This line specifies the file to which
+standard out will be appended. If a relative file name is used, it
+will be relative to your current working directory.</li>
+<li><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-e</span> <span class="pre">hostname.err</span></code> This line specifies the file to which
+standard error will be appended. SLURM submission and processing
+errors will also appear in the file.</li>
+<li><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--mail-user=ajk&#64;123.com</span></code> The email address to which the
+–mail-type messages will be sent.</li>
+<li><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--mail-type=END</span></code> Because jobs are processed in the
+“background” and can take some time to run, it is useful send an
+email message when the job has finished (–mail-type=END). Email can
+also be sent for other processing stages (START, FAIL) or at all of
+the times (ALL)</li>
+</ul>
+<p>Here a few example scripts. Contact [<a class="reference external" href="mailto:brendan&#46;f&#46;griffen&#37;&#52;&#48;gmail&#46;com">mailto:brendan<span>&#46;</span>f<span>&#46;</span>griffen<span>&#64;</span>gmail<span>&#46;</span>com</a>
+Brendan Griffen] if you would like help constructing something more
+specific. [<a class="reference external" href="https://rc.fas.harvard.edu/resources/running-jobs/">https://rc.fas.harvard.edu/resources/running-jobs/</a> Harvard
+FAS] has a great number of examples and useful tips.</p>
+<ul class="simple">
+<li>I have a simple serial job which doesn’t require much memory.</li>
+</ul>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -n 1</span>
+<span class="c1">#SBATCH -o jobname.o%j</span>
+<span class="c1">#SBATCH -e jobname.e%j</span>
+<span class="c1">#SBATCH -p RegNodes</span>
+<span class="c1">#SBATCH -J jobname</span>
+<span class="c1">#SBATCH --share</span>
+
+<span class="o">./</span><span class="n">job</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>I have an openMP task which requires a large amount of memory (up to
+256GB).</li>
+</ul>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -N 1 -n 64</span>
+<span class="c1">#SBATCH -o jobname.o%j</span>
+<span class="c1">#SBATCH -e jobname.e%j</span>
+<span class="c1">#SBATCH -p AMD64</span>
+<span class="c1">#SBATCH -J jobname</span>
+
+<span class="n">export</span> <span class="n">OMP_NUM_THREADS</span><span class="o">=</span><span class="mi">64</span>
+<span class="o">./</span><span class="n">job</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>I have a MPI job which doesn’t use much memory.</li>
+</ul>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -N 2 -n 16</span>
+<span class="c1">#SBATCH -o jobname.o%j</span>
+<span class="c1">#SBATCH -e jobname.e%j</span>
+<span class="c1">#SBATCH -p RegNodes</span>
+<span class="c1">#SBATCH -J jobname</span>
+
+<span class="n">mpirun</span> <span class="o">-</span><span class="n">np</span> <span class="mi">16</span> <span class="o">./</span><span class="n">P</span><span class="o">-</span><span class="n">Gadget3</span> <span class="n">param</span><span class="o">.</span><span class="n">txt</span> <span class="mi">1</span><span class="o">&gt;</span><span class="n">OUTPUT</span> <span class="mi">2</span><span class="o">&gt;</span><span class="n">ERROR</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>I have a job which is requires lots of IO between MPI tasks but
+doesn’t consume much memory.</li>
+</ul>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -n 16</span>
+<span class="c1">#SBATCH -o jobname.o%j</span>
+<span class="c1">#SBATCH -e jobname.e%j</span>
+<span class="c1">#SBATCH -p HyperNodes</span>
+<span class="c1">#SBATCH -J jobname</span>
+
+<span class="n">mpirun</span> <span class="o">-</span><span class="n">np</span> <span class="mi">16</span> <span class="o">./</span><span class="n">job</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>I have a MPI job which requires a very large amount of memory.</li>
+</ul>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -n 128</span>
+<span class="c1">#SBATCH -o jobname.o%j</span>
+<span class="c1">#SBATCH -e jobname.e%j</span>
+<span class="c1">#SBATCH -p RegNodes</span>
+<span class="c1">#SBATCH -J jobname</span>
+
+<span class="n">mpirun</span> <span class="o">-</span><span class="n">np</span> <span class="mi">128</span> <span class="o">./</span><span class="n">job</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="visualizing-cluster-usage">
+<h2>Visualizing Cluster Usage<a class="headerlink" href="#visualizing-cluster-usage" title="Permalink to this headline">¶</a></h2>
+<p>The cluster now can be visualized interactively. Just type <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">sview</span></code>
+in the command prompt on antares.mit.edu and you’ll see the an
+infographic.</p>
+<p>Alternatively, you can use Ganglia which can be found here:
+<a class="reference external" href="http://antares.mit.edu/ganglia/">http://antares.mit.edu/ganglia/</a></p>
+</div>
+<div class="section" id="slurm-status-error-help">
+<h2>SLURM Status &amp; Error Help<a class="headerlink" href="#slurm-status-error-help" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="status-messages">
+<h3>Status Messages<a class="headerlink" href="#status-messages" title="Permalink to this headline">¶</a></h3>
+<p>When you type <code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">username</span></code> you should see a shortened version
+of one of the following (e.g. PD for PENDING). You can also see these in
+the <code class="docutils literal notranslate"><span class="pre">sview</span></code>.</p>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">PENDING</span></code> Job is awaiting a slot suitable for the requested
+resources. Jobs with high resource demands may spend significant time
+PENDING.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">RUNNING</span></code> Job is running.</p>
+</li>
+<li><div class="first line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">COMPLETED</span></code></div>
+<div class="line">Job has finished and the command(s) have returned successfully
+(i.e. exit code 0).</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">CANCELLED</span></code></div>
+<div class="line">Job has been terminated by the user or administrator using scancel.</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">FAILED</span></code></div>
+<div class="line">Job finished with an exit code other than 0.</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="error-messages">
+<h3>Error Messages<a class="headerlink" href="#error-messages" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><div class="first line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">JOB</span> <span class="pre">&lt;jobid&gt;</span> <span class="pre">CANCELLED</span> <span class="pre">AT</span> <span class="pre">&lt;time&gt;</span> <span class="pre">DUE</span> <span class="pre">TO</span> <span class="pre">TIME</span> <span class="pre">LIMIT</span></code></div>
+<div class="line">You did not specify enough time in your batch submission script.
+The -t option sets time in minutes, or can also take
+hours:minutes:seconds form (12:30:00 for 12.5 hours)</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">Job</span> <span class="pre">&lt;jobid&gt;</span> <span class="pre">exceeded</span> <span class="pre">&lt;mem&gt;</span> <span class="pre">memory</span> <span class="pre">limit,</span> <span class="pre">being</span> <span class="pre">killed</span></code></div>
+<div class="line">Your job is attempting to use more memory than you’ve requested for
+it. Either increase the amount of memory requested by <code class="docutils literal notranslate"><span class="pre">--mem</span></code> or
+<code class="docutils literal notranslate"><span class="pre">--mem-per-cpu</span></code> or, if possible, reduce the amount your
+application is trying to use. For example, many Java programs set
+heap space using the <code class="docutils literal notranslate"><span class="pre">-Xmx</span></code> JVM option. This could potentially be
+reduced.</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">slurm_receive_msg:</span> <span class="pre">Socket</span> <span class="pre">timed</span> <span class="pre">out</span> <span class="pre">on</span> <span class="pre">send/recv</span> <span class="pre">operation</span></code></div>
+<div class="line">This message indicates a failure of the SLURM controller. Though
+there are many possible explanations, it is generally due to an
+overwhelming number of jobs being submitted, or, occasionally,
+finishing simultaneously. If you want to figure out if SLURM is
+working use the <code class="docutils literal notranslate"><span class="pre">sdiag</span></code> command. <code class="docutils literal notranslate"><span class="pre">sdiag</span></code> should respond quickly
+in these situations and give you an idea as to what the scheduler
+is up to.</div>
+</div>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">JOB</span> <span class="pre">&lt;jobid&gt;</span> <span class="pre">CANCELLED</span> <span class="pre">AT</span> <span class="pre">&lt;time&gt;</span> <span class="pre">DUE</span> <span class="pre">TO</span> <span class="pre">NODE</span> <span class="pre">FAILURE</span></code> This message
+may arise for a variety of reasons, but it indicates that the host on
+which your job was running can no longer be contacted by SLURM.</p>
+</li>
+</ul>
+<p>Again, see the <a class="reference external" href="https://rc.fas.harvard.edu/resources/running-jobs/">Harvard FAS SLURM
+website</a> for
+extra information and help.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Caterpillar Collaboration.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

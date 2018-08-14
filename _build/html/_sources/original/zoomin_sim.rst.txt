@@ -1,0 +1,264 @@
+Zoom-in "Caterpillar" Halos
+========================
+
+.. NOTE::
+   The majority of the information about the zoom-in runs can be found in `Griffen et al. (2016) <http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1509.01255>`__. Here we simply outline some details which were left out of the publication for the sake of brevity.
+
+Overview
+--------
+
+.. raw:: html
+
+   <center>
+
++--------+--------+--------+--------+--------+--------+
+| ~\ *Aq | MUSIC  | Effect | \\(m\_ | \\(m\_ | \\(:ra |
+| uarius | *level | ive    | {dm}\\ | {dm}\\ | w-late |
+| *      | max*   | Resolu | )      | )      | x:`\ep |
+| Level  |        | tion   | 10^4   | 10^4   | silon` |
+|        |        |        | *h*\ ^ | \\(M\_ | \_{dm} |
+|        |        |        | -1     | :raw-l | \\)    |
+|        |        |        | \\(M\_ | atex:` | pc/h   |
+|        |        |        | :raw-l | \odot` |        |
+|        |        |        | atex:` | \\)    |        |
+|        |        |        | \odot` |        |        |
+|        |        |        | \\)    |        |        |
++========+========+========+========+========+========+
+| 1      | 15     | 32768^ | 0.25   | 0.37   | 36     |
+|        |        | 3      |        |        |        |
++--------+--------+--------+--------+--------+--------+
+| **2**  | **14** | **1638 | **2**  | **3**  | **76** |
+|        |        | 4^3**  |        |        |        |
++--------+--------+--------+--------+--------+--------+
+| 3      | 13     | 8096^3 | 16     | 24     | 152    |
++--------+--------+--------+--------+--------+--------+
+| 4      | 12     | 4096^3 | 128    | 190    | 228    |
++--------+--------+--------+--------+--------+--------+
+| 5      | 11     | 2048^3 | 1025   | 1527   | 452    |
++--------+--------+--------+--------+--------+--------+
+
+.. raw:: html
+
+   </center>
+
+Each panel represents one single realization of the Cat-1 halo at
+different resolutions. The far left is an LX11 run and the far right is
+an LX14 run.
+
+{{site.data.alerts.note}} The LX15 run has currently only been run for
+one of the halos and has been temporarily paused at z = 1. This will be
+finished with a few others once the main suite has been
+completed.{{site.data.alerts.end}}
+
+We have complete (modified) rockstar halo catalogues (together with
+consistent-trees merger trees) and z = 0 subfind catalogues.
+
+Force Softening
+---------------
+
+Softening was 1/80th the interparticle separation. We adopt the formula:
+``boxwidth/lx^2/80`` but stagger the force softenings for each higher
+level as 4 x base, 8 x base, 32 x base, 64 x base where base is the base
+force softening. For each of the zooms, this equates to:
+
+.. raw:: html
+
+   <center>
+
++----------------------+---------------+---------------+---------------+----------------+
+| In Gadget            | LX11          | LX12          | LX13          | LX14           |
++======================+===============+===============+===============+================+
+| ``SofteningHalo``    | 0.000610352   | 0.000305176   | 0.000152588   | 0.0000762939   |
++----------------------+---------------+---------------+---------------+----------------+
+| ``SofteningDisk``    | 0.002441406   | 0.001220703   | 0.000610352   | 0.000305176    |
++----------------------+---------------+---------------+---------------+----------------+
+| ``SofteningBulge``   | 0.004882813   | 0.002441406   | 0.001220703   | 0.000610352    |
++----------------------+---------------+---------------+---------------+----------------+
+| ``SofteningStars``   | 0.01953125    | 0.009765625   | 0.004882813   | 0.002441406    |
++----------------------+---------------+---------------+---------------+----------------+
+| ``SofteningBndry``   | 0.0390625     | 0.01953125    | 0.009765625   | 0.004882813    |
++----------------------+---------------+---------------+---------------+----------------+
+
+units of Mpc/h
+
+.. raw:: html
+
+   </center>
+
+Temporal Resolution
+-------------------
+
+{{site.data.alerts.warning}} Timesteps are spaced logarithmically in
+expansion factor to z = 6, then linearly spaced in expansion factor down
+to z = 0. Always be aware of this as it could be strength and a weakness
+of your study.{{site.data.alerts.end}}
+
+This image shows the difference between the time step resolutions used
+in Caterpillar and those used in the Aquarius simulation. We wanted
+higher resolution at all redshifts for many purposes. At z > 6 we wanted
+to model Lyman-Werner radiation which requires timesteps of order the
+lifespan of Population III star formation. At low redshift we wanted
+timesteps of roughly 50-60 Myrs which is the disruption time scale of
+many small dwarf galaxies of the Milky Way. This also allows detailed
+modelling of the pericentric passages of infalling satellite systems,
+which is a crucial parameter for determining post-infall mass loss, for
+example.
+
+.. raw:: html
+
+   <center>
+
+.. raw:: html
+
+   </center>
+
+Contamination Study
+-------------------
+
+A number of contamination studies have been carried out. This involves
+changing the Lagrangian geometry in some way to keep the contamination
+(distance to the nearest particle type 2 as far as possible) low whilst
+conserving CPU hours. Our selected test geometries were as follows
+
+.. raw:: html
+
+   <center>
+
++--------+------+
+| Geomet | Deta |
+| ry     | il   |
++========+======+
+| BA     | Orig |
+|        | inal |
+|        | MUSI |
+|        | C    |
+|        | boun |
+|        | ding |
+|        | box  |
+|        | (e.g |
+|        | .    |
+|        | the  |
+|        | exac |
+|        | t    |
+|        | boun |
+|        | ding |
+|        | box  |
+|        | of   |
+|        | lagr |
+|        | volu |
+|        | me). |
++--------+------+
+| BB     | 1.2  |
+|        | boun |
+|        | ding |
+|        | box  |
+|        | exte |
+|        | nt   |
++--------+------+
+| BC     | 1.4  |
+|        | boun |
+|        | ding |
+|        | box  |
+|        | exte |
+|        | nt   |
++--------+------+
+| BD     | 1.6  |
+|        | boun |
+|        | ding |
+|        | box  |
+|        | exte |
+|        | nt   |
++--------+------+
+| CA     | Conv |
+|        | ex   |
+|        | Hull |
+|        | Volu |
+|        | me   |
++--------+------+
+| EA     | Orig |
+|        | inal |
+|        | MUSI |
+|        | C    |
+|        | elli |
+|        | psoi |
+|        | d    |
+|        | (e.g |
+|        | .    |
+|        | the  |
+|        | exac |
+|        | t    |
+|        | boun |
+|        | ding |
+|        | box  |
+|        | of   |
+|        | lagr |
+|        | volu |
+|        | me). |
++--------+------+
+| EB     | 1.1  |
+|        | padd |
+|        | ing  |
++--------+------+
+| EC     | 1.2  |
+|        | padd |
+|        | ing  |
++--------+------+
+| EX     | 1.05 |
+|        | padd |
+|        | ing  |
++--------+------+
+
+.. raw:: html
+
+   </center>
+
+We did this for both 4 and 5 times the virial radius at z = 0 (marked by
+the letter 4 or 5 at the end of the abbreviated geometry). Making a
+total of ~18 test halos per *Caterpillar* halo. Our requirement was that
+there was no contamation (particle type 2) within 1 Mpc of the host at
+the LX11 level.
+
+We also looked at how the geometry of the lagrangian volume affected the
+contamination radius. As outlined in Griffen et al. (2015), we did not
+find any correlation with geometry and overall level contamination.
+Every simulation requires its own tailored geometry to achieve our
+contamination requirements.
+
+.. raw:: html
+
+   <center>
+
+.. raw:: html
+
+   </center>
+
+The size of the lagrangian volumes were also another challenge to
+overcome. If a halo had LX11 ICs which were larger than 300mb, we found
+that we could not run these at LX14 on national facilities. The size and
+distance became our two biggest obstacles when running the *Caterpillar*
+suite.
+
+.. raw:: html
+
+   <center>
+
+.. raw:: html
+
+   </center>
+
+Our rockstar catalogues only use the high-resolution particles. This
+means that there will be halos in the outskirts of the simulation which
+are contaminated. These are shown clearly below. Be sure not to just
+take all halos within the rockstar catalogues as some of them will be
+contaminated (underestimated masses, wrong profiles etc.). As a safety,
+one should only take halos which are within the contamination distance.
+This changes as a function of redshift so make sure you update your cut
+for each snapshot. The plots below are for z = 0.
+
+.. raw:: html
+
+   <center>
+
+.. raw:: html
+
+   </center>

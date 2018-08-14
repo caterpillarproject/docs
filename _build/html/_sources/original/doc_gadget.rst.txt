@@ -1,0 +1,149 @@
+Gadget
+========================
+
+Parameters
+----------
+
+For the simulation suite we use P-Gadget3 (first 24 halos) and Gadget4
+(remainder). The parent directory of each folder contains ``.gadget3``
+or ``.gadget4`` to indicate which halo was run with which code. We use
+the following compile flags for our runs. ``PMGRID`` changes depending
+on the resolution of the run. There is a great amount of documentation
+on each of these parameters on Phil Hopkin's `GIZMO
+website <http://www.tapir.caltech.edu/~phopkins/Site/GIZMO_files/gizmo_documentation.html>`__.
+
+.. code:: text
+
+    PERIODIC  
+    UNEQUALSOFTENINGS  
+    PMGRID=512  
+    GRIDBOOST=2  
+    PLACEHIGHRESREGION=2  
+    ENLARGEREGION=1.2  
+    MULTIPLEDOMAINS=16  
+    PEANOHILBERT  
+    WALLCLOCK  
+    MYSORT  
+    DOUBLEPRECISION  
+    OUTPUT_IN_DOUBLEPRECISION  
+    INPUT_IN_DOUBLEPRECISION  
+    ORDER_SNAPSHOTS_BY_ID  
+    NO_ISEND_IRECV_IN_DOMAIN  
+    FIX_PATHSCALE_MPI_STATUS_IGNORE_BUG  
+    COMPUTE_POTENTIAL_ENERGY  
+    OUTPUTPOTENTIAL  
+    RECOMPUTE_POTENTIAL_ON_OUTPUT  
+    HAVE_HDF5  
+    DEBUG  
+
+Parameter files for each of the runs can be found as ``param.txt`` in
+the relevant simulation directory. For those users who have access to
+``antares.mit.edu`` (MKI's compute cluster), Brendan Griffen's home
+directory contains the master files (configuration files, parameter
+files and expansion factor lists for output) for the entire suite.
+
+.. code:: bash
+
+    /home/bgriffen/exec/gadget3
+    /home/bgriffen/exec/gadget4
+
+Data Blocks In The Gadget Files
+-------------------------------
+
+See Data Access Examples to see how to load each of these blocks. One
+such way is:
+
+.. code:: python
+
+    import haloutils as htils
+    hpath = htils.get_paper_paths_lx(14)[0]
+    zoomid = htils.load_zoomid(hpath)
+    blockname = "POS " # NOTE THE EXTRA SPACE!
+    pos = htils.load_partblock(hpath,zoomid,blockname,partids=[listofids]) # units Mpc/h
+
+{{site.data.alerts.tip}} Make sure you include the right number of
+spaces (4) otherwise you will get an error when trying to read the
+blocks.{{site.data.alerts.end}}
+
+Other blocks you have access to are listed below:
+
+.. raw:: html
+
+   <center>
+
++---------+-------+--------+---------+
+| Block   | Descr | Units  | Notes   |
+| Name    | iptio |        |         |
+|         | n     |        |         |
++=========+=======+========+=========+
+| ``ID``  | ID    | -      | --      |
+|         | numbe |        |         |
+|         | r     |        |         |
+|         | (N)   |        |         |
++---------+-------+--------+---------+
+| ``POS`` | posit | comovi | They    |
+|         | ion   | ng     | are all |
+|         | (Nx3) | Mpc/h  | around  |
+|         |       |        | ~50     |
+|         |       |        | Mpc/h   |
+|         |       |        | as they |
+|         |       |        | are in  |
+|         |       |        | the     |
+|         |       |        | center  |
+|         |       |        | of the  |
+|         |       |        | 100     |
+|         |       |        | Mpc/h   |
+|         |       |        | box for |
+|         |       |        | the     |
+|         |       |        | resimul |
+|         |       |        | ations. |
++---------+-------+--------+---------+
+| ``VEL`` | veloc | spatia | Spatial |
+|         | ity   | l      | velocit |
+|         | (Nx3) | km\\(: | y.      |
+|         |       | raw-la | The     |
+|         |       | tex:`\ | peculia |
+|         |       | sqrt`( | r       |
+|         |       | a)\\)/ | velocit |
+|         |       | s      | y       |
+|         |       |        | is      |
+|         |       |        | obtaine |
+|         |       |        | d       |
+|         |       |        | by      |
+|         |       |        | multipl |
+|         |       |        | ying    |
+|         |       |        | this    |
+|         |       |        | value   |
+|         |       |        | by      |
+|         |       |        | \\(:raw |
+|         |       |        | -latex: |
+|         |       |        | `\sqrt` |
+|         |       |        | (a)\\). |
++---------+-------+--------+---------+
+| ``MASS` | parti | Msol/h | Use     |
+| `       | cle   |        | ``heade |
+|         | mass  |        | r.massa |
+|         | (N)   |        | rr[1]*1 |
+|         |       |        | e10``   |
+|         |       |        | as it   |
+|         |       |        | is      |
+|         |       |        | faster  |
+|         |       |        | than    |
+|         |       |        | reading |
+|         |       |        | in the  |
+|         |       |        | entire  |
+|         |       |        | block.  |
++---------+-------+--------+---------+
+| ``POT`` | poten | ---    | ----    |
+|         | tial  |        |         |
+|         | energ |        |         |
+|         | y     |        |         |
++---------+-------+--------+---------+
+
+.. raw:: html
+
+   </center>
+
+{{site.data.alerts.warning}} Remember to use the scale factor for the
+snapshot you are working on to convert the comoving quantities to
+physical. For z = 0, it doesn't matter.{{site.data.alerts.end}}

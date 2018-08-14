@@ -1,0 +1,1168 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Available Datasets &mdash; Caterpillar Project Docs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Caterpillar Project Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Project Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../policies.html">Access &amp; Authorship Policies</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caterpillar Project Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Available Datasets</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user/docs_datasets.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="available-datasets">
+<h1>Available Datasets<a class="headerlink" href="#available-datasets" title="Permalink to this headline">¶</a></h1>
+<p>Please refer to the Current Status and Policies page before proceeding.</p>
+<div class="section" id="particle-data-gadget">
+<h2>Particle Data (Gadget)<a class="headerlink" href="#particle-data-gadget" title="Permalink to this headline">¶</a></h2>
+<p>See Data Access Examples to see how to load each of these blocks. One such way is:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">haloutils</span> <span class="k">as</span> <span class="nn">htils</span>
+<span class="n">hpath</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_paper_paths_lx</span><span class="p">(</span><span class="mi">14</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">zoomid</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_zoomid</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+<span class="n">blockname</span> <span class="o">=</span> <span class="s2">&quot;POS &quot;</span> <span class="c1"># NOTE THE EXTRA SPACE!</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_partblock</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">zoomid</span><span class="p">,</span><span class="n">blockname</span><span class="p">,</span><span class="n">partids</span><span class="o">=</span><span class="p">[</span><span class="n">listofids</span><span class="p">])</span> <span class="c1"># units Mpc/h</span>
+</pre></div>
+</div>
+<p>{{site.data.alerts.tip}} Make sure you include the right number of
+spaces (4) otherwise you will get an error when trying to read the
+blocks.{{site.data.alerts.end}}</p>
+<p>Other blocks you have access to are listed below:</p>
+<center><table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="21%" />
+<col width="24%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Block
+Name</th>
+<th class="head">Descr
+iptio
+n</th>
+<th class="head">Units</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ID</span></code></td>
+<td>ID
+numbe
+r
+(N)</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>–</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">POS</span></code></td>
+<td>posit
+ion
+(Nx3)</td>
+<td>comovi
+ng
+Mpc/h</td>
+<td>They
+are all
+around
+~50
+Mpc/h
+as they
+are in
+the
+center
+of the
+100
+Mpc/h
+box for
+the
+resimul
+ations.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">VEL</span></code></td>
+<td>veloc
+ity
+(Nx3)</td>
+<td>spatia
+l
+km\(:
+raw-la
+tex:<a href="#id1"><span class="problematic" id="id2">`</span></a>sqrt`(
+a)\)/
+s</td>
+<td>Spatial
+velocit
+y.
+The
+peculia
+r
+velocit
+y
+is
+obtaine
+d
+by
+multipl
+ying
+this
+value
+by
+\(:raw
+-latex:
+<cite>sqrt</cite>
+(a)\).</td>
+</tr>
+<tr class="row-odd"><td><a href="#id3"><span class="problematic" id="id4">``</span></a>MASS`
+`</td>
+<td>parti
+cle
+mass
+(N)</td>
+<td>Msol/h</td>
+<td>Use
+<code class="docutils literal notranslate"><span class="pre">heade</span>
+<span class="pre">r.massa</span>
+<span class="pre">rr[1]*1</span>
+<span class="pre">e10</span></code>
+as it
+is
+faster
+than
+reading
+in the
+entire
+block.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">POT</span></code></td>
+<td>poten
+tial
+energ
+y</td>
+<td>—</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</center><p>{{site.data.alerts.warning}} Remember to use the scale factor for the
+snapshot you are working on to convert the comoving quantities to
+physical. For z = 0, it doesn’t matter.{{site.data.alerts.end}}</p>
+</div>
+<div class="section" id="halo-catalogues-rockstar">
+<h2>Halo Catalogues (Rockstar)<a class="headerlink" href="#halo-catalogues-rockstar" title="Permalink to this headline">¶</a></h2>
+<p>Rockstar outputs a large number of halo properties.</p>
+<center><table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="23%" />
+<col width="23%" />
+<col width="23%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">variab
+le</th>
+<th class="head">unit
+s</th>
+<th class="head">defi
+niti
+on</th>
+<th class="head">note
+s</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>&#160;</td>
+<td>the
+ID
+numb
+er
+of
+the
+halo</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id5"><span class="problematic" id="id6">``</span></a>posX
+``</td>
+<td>Mpc/
+h</td>
+<td>como
+ving
+x-po
+siti
+on</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a href="#id7"><span class="problematic" id="id8">``</span></a>posY
+``</td>
+<td>Mpc/
+h</td>
+<td>como
+ving
+y-po
+siti
+on</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id9"><span class="problematic" id="id10">``</span></a>posZ
+``</td>
+<td>Mpc/
+h</td>
+<td>como
+ving
+z-po
+siti
+on</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">pecV</span>
+<span class="pre">X</span></code></td>
+<td>km/s</td>
+<td>Pecu
+liar
+x-di
+r
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">pecV</span>
+<span class="pre">Y</span></code></td>
+<td>km/s</td>
+<td>Pecu
+liar
+y-di
+r
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">pecV</span>
+<span class="pre">Z</span></code></td>
+<td>km/s</td>
+<td>Pecu
+liar
+z-di
+r
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">core</span>
+<span class="pre">velX</span></code></td>
+<td>km/s</td>
+<td>x-di
+r
+core
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">core</span>
+<span class="pre">velY</span></code></td>
+<td>km/s</td>
+<td>y-di
+r
+core
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">core</span>
+<span class="pre">velZ</span></code></td>
+<td>km/s</td>
+<td>z-di
+r
+core
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">bulk</span>
+<span class="pre">velX</span></code></td>
+<td>como
+ving
+km/s</td>
+<td>x-di
+r
+bulk
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">bulk</span>
+<span class="pre">velY</span></code></td>
+<td>como
+ving
+km/s</td>
+<td>y-di
+r
+bulk
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">bulk</span>
+<span class="pre">velZ</span></code></td>
+<td>como
+ving
+km/s</td>
+<td>z-di
+r
+bulk
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id11"><span class="problematic" id="id12">``</span></a>mvir
+``</td>
+<td>Msol
+/h</td>
+<td>viri
+al
+mass
+set
+by
+<cite>Bry
+an
+&amp;
+Norm
+an
+(199
+8) &lt;
+http
+://c
+dsad
+s.u-
+stra
+sbg.
+fr/a
+bs/1
+998A
+pJ..
+.495
+…8
+0B&gt;</cite>
+__
+pres
+crip
+tion</td>
+<td>this
+shou
+ld
+only
+be
+used
+for
+the
+mass
+ive
+host
+halo
+s
+- it
+is
+best
+to
+just
+use
+<a href="#id13"><span class="problematic" id="id14">``</span></a>mg
+rav`
+`</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">mgra</span>
+<span class="pre">v</span></code></td>
+<td>Msol
+/h</td>
+<td>viri
+al
+mass
+set
+by
+<cite>Bry
+an
+&amp;
+Norm
+an
+(199
+8) &lt;
+http
+://c
+dsad
+s.u-
+stra
+sbg.
+fr/a
+bs/1
+998A
+pJ..
+.495
+…8
+0B&gt;</cite>
+__
+pres
+crip
+tion</td>
+<td>when
+usin
+g
+the
+cata
+logu
+es,
+only
+use
+this
+quan
+tity
+as
+it
+is
+the
+grav
+itat
+iona
+lly
+boun
+d
+mass
+of
+the
+halo
+-
+espe
+cial
+ly
+for
+subh
+alos</td>
+</tr>
+<tr class="row-odd"><td><a href="#id15"><span class="problematic" id="id16">``</span></a>rvir
+``</td>
+<td>kpc/
+h</td>
+<td>viri
+al
+radi
+us
+set
+by
+<cite>Bry
+an
+&amp;
+Norm
+an
+(199
+8) &lt;
+http
+://c
+dsad
+s.u-
+stra
+sbg.
+fr/a
+bs/1
+998A
+pJ..
+.495
+…8
+0B&gt;</cite>
+__
+pres
+crip
+tion</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">chil</span>
+<span class="pre">d_r</span></code></td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">vmax</span>
+<span class="pre">_r</span></code></td>
+<td>km/s</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">mgra</span>
+<span class="pre">v</span></code></td>
+<td>Msol
+/h</td>
+<td>grav
+itat
+iona
+l
+mass</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id17"><span class="problematic" id="id18">``</span></a>vmax
+``</td>
+<td>km/s</td>
+<td>Maxi
+mum
+circ
+ular
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">rvma</span>
+<span class="pre">x</span></code></td>
+<td>kpc/
+h</td>
+<td>radi
+us
+at
+maxi
+mum
+circ
+ular
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">rs</span></code></td>
+<td>kpc/
+h</td>
+<td>NFW
+scal
+e
+radi
+us</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a href="#id19"><span class="problematic" id="id20">``</span></a>rs_k
+lypin`
+`</td>
+<td>kpc/
+h</td>
+<td>Klyp
+in
+defi
+ned
+scal
+e
+radi
+us</td>
+<td>bett
+er
+for
+smal
+ler
+halo
+s</td>
+</tr>
+<tr class="row-odd"><td><a href="#id21"><span class="problematic" id="id22">``</span></a>vrms
+``</td>
+<td>km/s</td>
+<td>rms
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Jx</span></code></td>
+<td>&#160;</td>
+<td>x-co
+mpon
+ent
+angu
+lar
+mome
+ntum</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Jy</span></code></td>
+<td>&#160;</td>
+<td>y-co
+mpon
+ent
+angu
+lar
+mome
+ntum</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Jz</span></code></td>
+<td>&#160;</td>
+<td>z-co
+mpon
+ent
+angu
+lar
+mome
+ntum</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id23"><span class="problematic" id="id24">``</span></a>Epot
+``</td>
+<td>&#160;</td>
+<td>Pote
+ntia
+l
+ener
+gy
+of
+the
+halo</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a href="#id25"><span class="problematic" id="id26">``</span></a>spin
+``</td>
+<td>&#160;</td>
+<td>Peeb
+les
+defi
+ned
+spin
+para
+mete
+r</td>
+<td>This
+shou
+ld
+only
+be
+used
+for
+halo
+s
+with
+a
+larg
+e
+numb
+er
+of
+part
+icle
+s
+(~50
+0+)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">spin</span>
+<span class="pre">_bullo</span>
+<span class="pre">ck</span></code></td>
+<td>&#160;</td>
+<td>Bull
+ock’
+s
+modi
+fied
+spin
+para
+mete
+r</td>
+<td>See
+abov
+e.</td>
+</tr>
+<tr class="row-even"><td><a href="#id27"><span class="problematic" id="id28">``</span></a>xoff
+``</td>
+<td>&#160;</td>
+<td>Posi
+tion
+offs
+et
+para
+mete
+r
+abs(
+cent
+er
+of
+mass
+posi
+tion
+-
+halo
+posi
+tion
+)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id29"><span class="problematic" id="id30">``</span></a>voff
+``</td>
+<td>&#160;</td>
+<td>Velo
+city
+offs
+et
+para
+mete
+r
+abs(
+cent
+er
+of
+mass
+velo
+city
+-
+halo
+velo
+city
+)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">b_to</span>
+<span class="pre">_a</span></code></td>
+<td>&#160;</td>
+<td>Halo
+elli
+ptic
+ity
+b/a</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">c_to</span>
+<span class="pre">_a</span></code></td>
+<td>&#160;</td>
+<td>Halo
+elli
+ptic
+ity
+c/a</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">b_to</span>
+<span class="pre">_a2</span></code></td>
+<td>&#160;</td>
+<td>Halo
+elli
+ptic
+ity
+b/a
+(dif
+fere
+nt
+pres
+crip
+tion
+)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">c_to</span>
+<span class="pre">_a2</span></code></td>
+<td>&#160;</td>
+<td>Halo
+elli
+ptic
+ity
+c/a
+(dif
+fere
+nt
+pres
+crip
+tion
+)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a href="#id31"><span class="problematic" id="id32">``</span></a>A[x]
+``</td>
+<td>&#160;</td>
+<td>x-ax
+is
+for
+elli
+ptic
+ity
+a</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id33"><span class="problematic" id="id34">``</span></a>A[y]
+``</td>
+<td>&#160;</td>
+<td>y-xi
+s
+for
+elli
+ptic
+ity
+a</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><a href="#id35"><span class="problematic" id="id36">``</span></a>A[z]
+``</td>
+<td>&#160;</td>
+<td>z-xi
+s
+for
+elli
+ptic
+ity
+a</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">A2[x</span>
+<span class="pre">]</span></code></td>
+<td>&#160;</td>
+<td>x-ax
+is
+for
+elli
+ptic
+ity
+a
+(dif
+fere
+nt
+pres
+crip
+tion
+)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">A2[y</span>
+<span class="pre">]</span></code></td>
+<td>&#160;</td>
+<td>y-xi
+s
+for
+elli
+ptic
+ity
+a
+(dif
+fere
+nt
+pres
+crip
+tion
+)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">A2[z</span>
+<span class="pre">]</span></code></td>
+<td>&#160;</td>
+<td>z-xi
+s
+for
+elli
+ptic
+ity
+a
+(dif
+fere
+nt
+pres
+crip
+tion
+)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">T/ab</span>
+<span class="pre">s(U)</span></code></td>
+<td>&#160;</td>
+<td>Viri
+al
+rati
+o
+(kin
+etic
+/abs
+(pot
+enti
+al))</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">min_</span>
+<span class="pre">pos_er</span>
+<span class="pre">r</span></code></td>
+<td>&#160;</td>
+<td>Mini
+mum
+erro
+r
+in
+posi
+tion</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">min_</span>
+<span class="pre">vel_er</span>
+<span class="pre">r</span></code></td>
+<td>&#160;</td>
+<td>Mini
+mum
+erro
+r
+in
+bulk
+velo
+city</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id37"><span class="problematic" id="id38">``</span></a><a href="#id39"><span class="problematic" id="id40">min_</span></a>
+bulkve
+l_err`
+`</td>
+<td>&#160;</td>
+<td>Mini
+mum
+bulk
+velo
+city
+erro
+r.</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">tota</span>
+<span class="pre">l_npar</span>
+<span class="pre">t</span></code></td>
+<td>&#160;</td>
+<td>The
+tota
+l
+numb
+er
+of
+part
+icle
+s
+asso
+ciat
+ed
+with
+this
+halo
+(sub
+s
+incl
+uded
+)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">npar</span>
+<span class="pre">t</span></code></td>
+<td>&#160;</td>
+<td>The
+numb
+er
+of
+part
+icle
+s
+asso
+ciat
+ed
+with
+a
+halo
+(doe
+s
+not
+incl
+ude
+subh
+alos
+)</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</center></div>
+<div class="section" id="merger-trees-consistent-trees">
+<h2>Merger Trees (consistent-trees)<a class="headerlink" href="#merger-trees-consistent-trees" title="Permalink to this headline">¶</a></h2>
+<p>The consistent-trees output it similar to that of the rockstar catalogue
+except now there are additional paramters which connect the halos in
+time.</p>
+<center></center><p>As listed in the previous table, <code class="docutils literal notranslate"><span class="pre">consistent-trees</span></code> outputs two
+indexes for the connecting the halos, (1) depth-first ordered or (2)
+breadth-first ordered. The graphic below indicates what the fundamental
+differences are between these two methods.</p>
+<center></center></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Caterpillar Collaboration.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

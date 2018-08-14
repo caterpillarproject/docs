@@ -1,0 +1,1467 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Creating The Suite &mdash; Caterpillar Project Docs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Caterpillar Project Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Project Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_history_motivation.html">History &amp; Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_project_status.html">Current Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../policies.html">Access &amp; Authorship Policies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs_datasets.html">Available Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs_naming_conventions.html">Naming Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_data_access_examples.html">Usage Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_mit_cluster.html">Using MIT’s Compute Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_mit_cluster.html#submitting-jobs">Submitting Jobs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caterpillar Project Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Creating The Suite</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/technical/doc_sims.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-the-suite">
+<h1>Creating The Suite<a class="headerlink" href="#creating-the-suite" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="initial-conditions">
+<h2>Initial Conditions<a class="headerlink" href="#initial-conditions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h3>
+<p>We use the multi-scale cosmological initial conditions creator MUSIC.
+MUSIC is a computer program to generate nested grid initial conditions
+for high-resolution “zoom” cosmological simulations. A detailed
+description of the algorithms can be found in Hahn &amp; Abel (2011). You
+can download the user’s guide
+<a class="reference external" href="https://bitbucket.org/ohahn/music/downloads/MUSIC_Users_Guide.pdf">here</a>
+or obtain a copy of the code
+<a class="reference external" href="https://people.phys.ethz.ch/~hahn/MUSIC/">here</a>. Any questions
+should be directed to <a class="reference external" href="mailto:brendan&#46;f&#46;griffen&#37;&#52;&#48;gmail&#46;com">Brendan Griffen</a>
+and then if that fails, <a class="reference external" href="mailto:hahn&#37;&#52;&#48;phys&#46;ethz&#46;ch">Oliver Hahn</a>.</p>
+</div>
+<div class="section" id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
+<p>These are the parameter files which were used to generate the initial
+coditions for the <em>Caterpillar</em> project. We adopt the raw Planck (2013)
+cosmology and do not use 2nd order lagrangian perturbation theory. The
+<a class="reference external" href="https://bitbucket.org/ohahn/music/downloads/MUSIC_Users_Guide.pdf">user
+guide</a>
+contains all the information required to understand the following
+parameter files. Within each simulation directory, there is a file named
+<code class="docutils literal notranslate"><span class="pre">OUTPUTmusic</span></code> which gives the log of the construction of the initial
+conditions.</p>
+</div>
+<div class="section" id="parent-simulation">
+<h3>Parent Simulation<a class="headerlink" href="#parent-simulation" title="Permalink to this headline">¶</a></h3>
+<p>First we constructed a parent simulation of sufficient size to include
+thousands of Milky Way sized systems but also of sufficient resolution
+to construct good lagrangian volumes. We decided on ~10,000 particles
+per Milky Way-sized host and a 100 Mpc/h volume. Our <code class="docutils literal notranslate"><span class="pre">level_max</span></code> is 10
+below, which means our parent simulation’s effective resolution is
+(210)3 = (1024)3 (i.e. a particle mass of 8.72 x 107
+\(M_:raw-latex:<cite>odot</cite>/h\).</p>
+<p>If you have access to the MIT cluster (<code class="docutils literal notranslate"><span class="pre">bigbang.mit.edu</span></code>), you can
+access the parent simulation data here:
+<code class="docutils literal notranslate"><span class="pre">/bigbang/data/AnnaGroup/caterpillar/parent/gL100X10/</span></code>. Within this
+folder you’ll find the following file (within <code class="docutils literal notranslate"><span class="pre">ics/</span></code>):</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># parentics.conf</span>
+<span class="p">[</span><span class="n">setup</span><span class="p">]</span>
+<span class="n">boxlength</span>               <span class="o">=</span> <span class="mi">100</span>
+<span class="n">zstart</span>                  <span class="o">=</span> <span class="mi">127</span>
+<span class="n">levelmin</span>                <span class="o">=</span> <span class="mi">10</span>
+<span class="n">levelmin_TF</span>             <span class="o">=</span> <span class="mi">10</span>
+<span class="n">levelmax</span>                <span class="o">=</span> <span class="mi">10</span>
+<span class="n">padding</span>                 <span class="o">=</span> <span class="mi">8</span>
+<span class="n">overlap</span>                 <span class="o">=</span> <span class="mi">4</span>
+<span class="n">ref_center</span>              <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span>
+<span class="n">ref_extent</span>              <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span>
+<span class="n">align_top</span>               <span class="o">=</span> <span class="n">yes</span>
+<span class="n">baryons</span>                 <span class="o">=</span> <span class="n">no</span>
+<span class="n">use_2LPT</span>                <span class="o">=</span> <span class="n">no</span>
+<span class="n">use_LLA</span>                 <span class="o">=</span> <span class="n">no</span>
+<span class="n">periodic_TF</span>             <span class="o">=</span> <span class="n">yes</span>
+
+<span class="p">[</span><span class="n">cosmology</span><span class="p">]</span>
+<span class="n">Omega_m</span>                 <span class="o">=</span> <span class="mf">0.3175</span>
+<span class="n">Omega_L</span>                 <span class="o">=</span> <span class="mf">0.6825</span>
+<span class="n">Omega_b</span>                 <span class="o">=</span> <span class="mf">0.049</span>
+<span class="n">H0</span>                      <span class="o">=</span> <span class="mf">67.11</span>
+<span class="n">sigma_8</span>                 <span class="o">=</span> <span class="mf">0.8344</span>
+<span class="n">nspec</span>                   <span class="o">=</span> <span class="mf">0.9624</span>
+<span class="n">transfer</span>                <span class="o">=</span> <span class="n">eisenstein</span>
+
+<span class="p">[</span><span class="n">random</span><span class="p">]</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>                <span class="o">=</span> <span class="mi">34567</span>
+
+<span class="p">[</span><span class="n">output</span><span class="p">]</span>
+<span class="nb">format</span>                  <span class="o">=</span> <span class="n">gadget2</span>
+<span class="n">filename</span>                <span class="o">=</span> <span class="o">./</span><span class="n">ics</span>
+<span class="n">gadget_num_files</span>        <span class="o">=</span> <span class="mi">128</span>
+
+<span class="p">[</span><span class="n">poisson</span><span class="p">]</span>
+<span class="n">fft_fine</span>                <span class="o">=</span> <span class="n">yes</span>
+<span class="n">accuracy</span>                <span class="o">=</span> <span class="mf">1e-5</span>
+<span class="n">pre_smooth</span>              <span class="o">=</span> <span class="mi">3</span>
+<span class="n">post_smooth</span>             <span class="o">=</span> <span class="mi">3</span>
+<span class="n">smoother</span>                <span class="o">=</span> <span class="n">gs</span>
+<span class="n">laplace_order</span>           <span class="o">=</span> <span class="mi">6</span>
+<span class="n">grad_order</span>              <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="zoom-in-caterpillar-simulations">
+<h3>Zoom-in “Caterpillar” Simulations<a class="headerlink" href="#zoom-in-caterpillar-simulations" title="Permalink to this headline">¶</a></h3>
+<p>Each simulation folder has a configuration file for MUSIC (e.g.
+<code class="docutils literal notranslate"><span class="pre">H1079897_EX_Z127_P7_LN7_LX14_O4_NV4.conf</span></code>) which was used to
+construct the initial conditions.</p>
+<p>There are a few things to note about the zoom-in paramter files when
+compared to the parent volume parameter file. First is we now specify a
+<code class="docutils literal notranslate"><span class="pre">region_point_file</span></code> which defines the x,y,z (normalized to the box
+width) of the particles to be resampled. We have added the parameter
+<code class="docutils literal notranslate"><span class="pre">hipadding</span></code> which our own modification to allow for expanded regions.
+1.05, for example, represents an expanded ellipsoid (by 5%). See Section
+2.3 of <a class="reference external" href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1509.01255">Griffen et al.
+(2015)</a>
+for a more detailed description of these geometries and their impact on
+contamination.</p>
+<p>We also draw the reader’s attention to the seed values. Note that we do
+not set the seed values for any level lower than the parent volume (10)
+which makes MUSIC smooth out any levels lower than 10. The seed values
+at 11 are simply the halo numbers and then each level higher scales by a
+factor of 2 of this original number. This was required because the ICs
+were generated through our automatic pipeline and each simulation needs
+unique values to seed the random noise field. The <code class="docutils literal notranslate"><span class="pre">levelmin_TF</span></code> is
+also set to be the same as the parent volume (10). The padding and
+overlap parameters are the same for all simulations.</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># H1079897_EX_Z127_P7_LN7_LX14_O4_NV4.conf</span>
+<span class="p">[</span><span class="n">setup</span><span class="p">]</span>
+<span class="n">boxlength</span>            <span class="o">=</span> <span class="mi">100</span>
+<span class="n">zstart</span>               <span class="o">=</span> <span class="mi">127</span>
+<span class="n">levelmin</span>             <span class="o">=</span> <span class="mi">7</span>
+<span class="n">levelmin_TF</span>          <span class="o">=</span> <span class="mi">10</span>
+<span class="n">levelmax</span>             <span class="o">=</span> <span class="mi">14</span>
+<span class="n">padding</span>              <span class="o">=</span> <span class="mi">7</span>
+<span class="n">overlap</span>              <span class="o">=</span> <span class="mi">4</span>
+<span class="n">region</span>               <span class="o">=</span> <span class="n">ellipsoid</span>
+<span class="n">hipadding</span>            <span class="o">=</span> <span class="mf">1.05</span>
+<span class="n">region_point_file</span>    <span class="o">=</span> <span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="n">home01</span><span class="o">/</span><span class="n">bgriffen</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">caterpillar</span><span class="o">/</span><span class="n">ics</span><span class="o">/</span><span class="n">lagr</span><span class="o">/</span><span class="n">H1079897NRVIR4</span>
+<span class="n">align_top</span>            <span class="o">=</span> <span class="n">no</span>
+<span class="n">baryons</span>              <span class="o">=</span> <span class="n">no</span>
+<span class="n">use_2LPT</span>             <span class="o">=</span> <span class="n">no</span>
+<span class="n">use_2LLA</span>             <span class="o">=</span> <span class="n">no</span>
+<span class="n">periodic_TF</span>          <span class="o">=</span> <span class="n">yes</span>
+
+<span class="p">[</span><span class="n">cosmology</span><span class="p">]</span>
+<span class="n">Omega_m</span>              <span class="o">=</span> <span class="mf">0.3175</span>
+<span class="n">Omega_L</span>              <span class="o">=</span> <span class="mf">0.6825</span>
+<span class="n">Omega_b</span>              <span class="o">=</span> <span class="mf">0.049</span>
+<span class="n">H0</span>                   <span class="o">=</span> <span class="mf">67.11</span>
+<span class="n">sigma_8</span>              <span class="o">=</span> <span class="mf">0.8344</span>
+<span class="n">nspec</span>                <span class="o">=</span> <span class="mf">0.9624</span>
+<span class="n">transfer</span>             <span class="o">=</span> <span class="n">eisenstein</span>
+
+<span class="p">[</span><span class="n">random</span><span class="p">]</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>              <span class="o">=</span> <span class="mi">34567</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span>              <span class="o">=</span> <span class="mi">1079897</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span>              <span class="o">=</span> <span class="mi">2159794</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span>              <span class="o">=</span> <span class="mi">3239691</span>
+<span class="n">seed</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span>              <span class="o">=</span> <span class="mi">4319588</span>
+
+<span class="p">[</span><span class="n">output</span><span class="p">]</span>
+<span class="nb">format</span>               <span class="o">=</span> <span class="n">gadget2_double</span>
+<span class="n">filename</span>             <span class="o">=</span> <span class="o">./</span><span class="n">ics</span>
+<span class="n">gadget_num_files</span>     <span class="o">=</span> <span class="mi">8</span>
+<span class="n">gadget_spreadcoarse</span>  <span class="o">=</span> <span class="n">yes</span>
+
+<span class="p">[</span><span class="n">poisson</span><span class="p">]</span>
+<span class="n">fft_fine</span>             <span class="o">=</span> <span class="n">yes</span>
+<span class="n">accuracy</span>             <span class="o">=</span> <span class="mf">1e-05</span>
+<span class="n">pre_smooth</span>           <span class="o">=</span> <span class="mi">3</span>
+<span class="n">post_smooth</span>          <span class="o">=</span> <span class="mi">3</span>
+<span class="n">smoother</span>             <span class="o">=</span> <span class="n">gs</span>
+<span class="n">laplace_order</span>        <span class="o">=</span> <span class="mi">6</span>
+<span class="n">grad_order</span>           <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Parent Simulation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>The parent simulation was setup primarily to find Milky Way-sized
+candidates at z = 0. All the parameters used for the construction of the
+simulation were oriented around this goal.</p>
+<div class="section" id="id2">
+<h3>Overview<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<center><table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Volume
+<em>h</em>^
+3
+Mpc^3</th>
+<th class="head">#
+partic
+les</th>
+<th class="head">\(m_
+{dm}\
+)
+10^7
+<em>h</em>^
+-1
+\(M_
+:raw-l
+atex:`
+odot`
+\)</th>
+<th class="head">\(m_
+{dm}\
+)
+10^7
+\(M_
+:raw-l
+atex:`
+odot`
+\)</th>
+<th class="head">\(:ra
+w-late
+x:<cite>ep
+silon</cite>
+_{dm}
+\)
+pc</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>100^3</td>
+<td>1024^3</td>
+<td>9</td>
+<td>12</td>
+<td>2441</td>
+</tr>
+</tbody>
+</table>
+</center><p>{{site.data.alerts.note}} The parent simulation initial conditions were
+run on an older version of MUSIC.{{site.data.alerts.end}}</p>
+</div>
+<div class="section" id="volume">
+<h3>Volume<a class="headerlink" href="#volume" title="Permalink to this headline">¶</a></h3>
+<p>The volume of the parent simulation was selected to be 100 Mpc/h as this
+allows for roughly ~6500 Milky Way-sized (i.e. 10^12 Msol) systems to be
+found. After a gentle selection over local environment (i.e. making sure
+no halos were near clusters) 2122 candidates were used to select
+<em>Caterpillar</em> candidates.</p>
+</div>
+<div class="section" id="mass-resolution">
+<h3>Mass Resolution<a class="headerlink" href="#mass-resolution" title="Permalink to this headline">¶</a></h3>
+<p>We required a resolution which allowed us to resolve 10^12 Msol halos
+with 10,000 particles so as to construct well defined lagrangian
+volumes. This resulted in us selecting a resolution of 10243 or a
+particle mass of 8.72 x 107 \(M_:raw-latex:<cite>odot</cite>/h\).</p>
+</div>
+<div class="section" id="halo-selection">
+<h3>Halo Selection<a class="headerlink" href="#halo-selection" title="Permalink to this headline">¶</a></h3>
+<p>We selected halos with the following environmental requirements:</p>
+<ul class="simple">
+<li>halos between 0.7 - 3 x 1012 \(M_:raw-latex:<cite>odot</cite>\) (6564
+candidates)</li>
+<li>no halos larger than 7 x 1013 \(M_:raw-latex:<cite>odot</cite>\) within 7
+Mpc</li>
+<li>no halos larger than 7 x 1012 \(M_:raw-latex:<cite>odot</cite>\) within 2.8
+Mpc (2122 candidates)</li>
+</ul>
+<p>This is roughly in line with Tollerud et al. (2012), Boylan-Kolchin et
+al. (2013), Fardal et al. (2013), Pfiffel et al. (2013), Li &amp; White
+(2008), van der Marel et al. (2012), Karachentsev et al. (2004) and
+Tikhonov &amp; Klypin (2009). This avoids Milky Way-sized systems near
+clusters but does not make them overly isolated necessarily. Halos were
+also selected to not be preferentially near the very edge of the
+simulation volume as a matter of convenience. The first 24 <em>Caterpillar</em>
+halos are highlighted within the parent volume below.</p>
+<center></center></div>
+<div class="section" id="temporal-resolution">
+<h3>Temporal Resolution<a class="headerlink" href="#temporal-resolution" title="Permalink to this headline">¶</a></h3>
+<p>The time steps were set to be log of the expansion factor, following a
+similar convention to that used by the <em>Millenium</em> and <em>Millenium-II</em>
+simulations. The following table shows the various measures for
+time/size at each snapshot.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Be sure to use the halo utility module (haloutils) in Python for quickly getting the temporal quantity for a given snapshot. See data access for more information.</p>
+</div>
+  <center>
+
+Download CSV<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="34%" />
+<col width="26%" />
+<col width="23%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Snap</th>
+<th class="head">Scale Factor</th>
+<th class="head">Redshift</th>
+<th class="head">Time</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>0.0213</td>
+<td>46.0000</td>
+<td>0.0535</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>0.0290</td>
+<td>33.5029</td>
+<td>0.0851</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>0.0367</td>
+<td>26.2557</td>
+<td>0.1212</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>0.0444</td>
+<td>21.5245</td>
+<td>0.1613</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>0.0521</td>
+<td>18.1929</td>
+<td>0.2051</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>0.0598</td>
+<td>15.7199</td>
+<td>0.2522</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>0.0675</td>
+<td>13.8114</td>
+<td>0.3025</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>0.0752</td>
+<td>12.2940</td>
+<td>0.3557</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td>0.0829</td>
+<td>11.0586</td>
+<td>0.4117</td>
+</tr>
+<tr class="row-odd"><td>9</td>
+<td>0.0906</td>
+<td>10.0333</td>
+<td>0.4704</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>0.0983</td>
+<td>9.1687</td>
+<td>0.5316</td>
+</tr>
+<tr class="row-odd"><td>11</td>
+<td>0.1060</td>
+<td>8.4297</td>
+<td>0.5952</td>
+</tr>
+<tr class="row-even"><td>12</td>
+<td>0.1138</td>
+<td>7.7909</td>
+<td>0.6612</td>
+</tr>
+<tr class="row-odd"><td>13</td>
+<td>0.1215</td>
+<td>7.2331</td>
+<td>0.7294</td>
+</tr>
+<tr class="row-even"><td>14</td>
+<td>0.1292</td>
+<td>6.7419</td>
+<td>0.7998</td>
+</tr>
+<tr class="row-odd"><td>15</td>
+<td>0.1369</td>
+<td>6.3060</td>
+<td>0.8723</td>
+</tr>
+<tr class="row-even"><td>16</td>
+<td>0.1446</td>
+<td>5.9166</td>
+<td>0.9469</td>
+</tr>
+<tr class="row-odd"><td>17</td>
+<td>0.1523</td>
+<td>5.5666</td>
+<td>1.0234</td>
+</tr>
+<tr class="row-even"><td>18</td>
+<td>0.1600</td>
+<td>5.2503</td>
+<td>1.1018</td>
+</tr>
+<tr class="row-odd"><td>19</td>
+<td>0.1677</td>
+<td>4.9630</td>
+<td>1.1821</td>
+</tr>
+<tr class="row-even"><td>20</td>
+<td>0.1754</td>
+<td>4.7011</td>
+<td>1.2642</td>
+</tr>
+<tr class="row-odd"><td>21</td>
+<td>0.1831</td>
+<td>4.4611</td>
+<td>1.3481</td>
+</tr>
+<tr class="row-even"><td>22</td>
+<td>0.1908</td>
+<td>4.2406</td>
+<td>1.4337</td>
+</tr>
+<tr class="row-odd"><td>23</td>
+<td>0.1985</td>
+<td>4.0371</td>
+<td>1.5210</td>
+</tr>
+<tr class="row-even"><td>24</td>
+<td>0.2062</td>
+<td>3.8489</td>
+<td>1.6098</td>
+</tr>
+<tr class="row-odd"><td>25</td>
+<td>0.2139</td>
+<td>3.6742</td>
+<td>1.7003</td>
+</tr>
+<tr class="row-even"><td>26</td>
+<td>0.2216</td>
+<td>3.5117</td>
+<td>1.7923</td>
+</tr>
+<tr class="row-odd"><td>27</td>
+<td>0.2294</td>
+<td>3.3601</td>
+<td>1.8858</td>
+</tr>
+<tr class="row-even"><td>28</td>
+<td>0.2371</td>
+<td>3.2184</td>
+<td>1.9808</td>
+</tr>
+<tr class="row-odd"><td>29</td>
+<td>0.2448</td>
+<td>3.0856</td>
+<td>2.0772</td>
+</tr>
+<tr class="row-even"><td>30</td>
+<td>0.2525</td>
+<td>2.9608</td>
+<td>2.1749</td>
+</tr>
+<tr class="row-odd"><td>31</td>
+<td>0.2602</td>
+<td>2.8435</td>
+<td>2.2741</td>
+</tr>
+<tr class="row-even"><td>32</td>
+<td>0.2679</td>
+<td>2.7330</td>
+<td>2.3745</td>
+</tr>
+<tr class="row-odd"><td>33</td>
+<td>0.2756</td>
+<td>2.6286</td>
+<td>2.4762</td>
+</tr>
+<tr class="row-even"><td>34</td>
+<td>0.2833</td>
+<td>2.5299</td>
+<td>2.5792</td>
+</tr>
+<tr class="row-odd"><td>35</td>
+<td>0.2910</td>
+<td>2.4364</td>
+<td>2.6834</td>
+</tr>
+<tr class="row-even"><td>36</td>
+<td>0.2987</td>
+<td>2.3477</td>
+<td>2.7888</td>
+</tr>
+<tr class="row-odd"><td>37</td>
+<td>0.3064</td>
+<td>2.2635</td>
+<td>2.8953</td>
+</tr>
+<tr class="row-even"><td>38</td>
+<td>0.3141</td>
+<td>2.1835</td>
+<td>3.0029</td>
+</tr>
+<tr class="row-odd"><td>39</td>
+<td>0.3218</td>
+<td>2.1072</td>
+<td>3.1116</td>
+</tr>
+<tr class="row-even"><td>40</td>
+<td>0.3295</td>
+<td>2.0346</td>
+<td>3.2213</td>
+</tr>
+<tr class="row-odd"><td>41</td>
+<td>0.3372</td>
+<td>1.9652</td>
+<td>3.3321</td>
+</tr>
+<tr class="row-even"><td>42</td>
+<td>0.3449</td>
+<td>1.8990</td>
+<td>3.4438</td>
+</tr>
+<tr class="row-odd"><td>43</td>
+<td>0.3527</td>
+<td>1.8356</td>
+<td>3.5565</td>
+</tr>
+<tr class="row-even"><td>44</td>
+<td>0.3604</td>
+<td>1.7750</td>
+<td>3.6701</td>
+</tr>
+<tr class="row-odd"><td>45</td>
+<td>0.3681</td>
+<td>1.7169</td>
+<td>3.7846</td>
+</tr>
+<tr class="row-even"><td>46</td>
+<td>0.3758</td>
+<td>1.6612</td>
+<td>3.9000</td>
+</tr>
+<tr class="row-odd"><td>47</td>
+<td>0.3835</td>
+<td>1.6077</td>
+<td>4.0161</td>
+</tr>
+<tr class="row-even"><td>48</td>
+<td>0.3912</td>
+<td>1.5563</td>
+<td>4.1331</td>
+</tr>
+<tr class="row-odd"><td>49</td>
+<td>0.3989</td>
+<td>1.5069</td>
+<td>4.2508</td>
+</tr>
+<tr class="row-even"><td>50</td>
+<td>0.4066</td>
+<td>1.4594</td>
+<td>4.3693</td>
+</tr>
+<tr class="row-odd"><td>51</td>
+<td>0.4143</td>
+<td>1.4137</td>
+<td>4.4884</td>
+</tr>
+<tr class="row-even"><td>52</td>
+<td>0.4220</td>
+<td>1.3696</td>
+<td>4.6082</td>
+</tr>
+<tr class="row-odd"><td>53</td>
+<td>0.4297</td>
+<td>1.3271</td>
+<td>4.7287</td>
+</tr>
+<tr class="row-even"><td>54</td>
+<td>0.4374</td>
+<td>1.2861</td>
+<td>4.8497</td>
+</tr>
+<tr class="row-odd"><td>55</td>
+<td>0.4451</td>
+<td>1.2465</td>
+<td>4.9714</td>
+</tr>
+<tr class="row-even"><td>56</td>
+<td>0.4528</td>
+<td>1.2083</td>
+<td>5.0936</td>
+</tr>
+<tr class="row-odd"><td>57</td>
+<td>0.4605</td>
+<td>1.1713</td>
+<td>5.2163</td>
+</tr>
+<tr class="row-even"><td>58</td>
+<td>0.4683</td>
+<td>1.1356</td>
+<td>5.3395</td>
+</tr>
+<tr class="row-odd"><td>59</td>
+<td>0.4760</td>
+<td>1.1010</td>
+<td>5.4632</td>
+</tr>
+<tr class="row-even"><td>60</td>
+<td>0.4837</td>
+<td>1.0675</td>
+<td>5.5873</td>
+</tr>
+<tr class="row-odd"><td>61</td>
+<td>0.4914</td>
+<td>1.0351</td>
+<td>5.7118</td>
+</tr>
+<tr class="row-even"><td>62</td>
+<td>0.4991</td>
+<td>1.0037</td>
+<td>5.8367</td>
+</tr>
+<tr class="row-odd"><td>63</td>
+<td>0.5068</td>
+<td>0.9732</td>
+<td>5.9620</td>
+</tr>
+<tr class="row-even"><td>64</td>
+<td>0.5145</td>
+<td>0.9437</td>
+<td>6.0876</td>
+</tr>
+<tr class="row-odd"><td>65</td>
+<td>0.5222</td>
+<td>0.9150</td>
+<td>6.2135</td>
+</tr>
+<tr class="row-even"><td>66</td>
+<td>0.5299</td>
+<td>0.8871</td>
+<td>6.3396</td>
+</tr>
+<tr class="row-odd"><td>67</td>
+<td>0.5376</td>
+<td>0.8601</td>
+<td>6.4660</td>
+</tr>
+<tr class="row-even"><td>68</td>
+<td>0.5453</td>
+<td>0.8338</td>
+<td>6.5927</td>
+</tr>
+<tr class="row-odd"><td>69</td>
+<td>0.5530</td>
+<td>0.8082</td>
+<td>6.7195</td>
+</tr>
+<tr class="row-even"><td>70</td>
+<td>0.5607</td>
+<td>0.7834</td>
+<td>6.8465</td>
+</tr>
+<tr class="row-odd"><td>71</td>
+<td>0.5684</td>
+<td>0.7592</td>
+<td>6.9737</td>
+</tr>
+<tr class="row-even"><td>72</td>
+<td>0.5761</td>
+<td>0.7357</td>
+<td>7.1010</td>
+</tr>
+<tr class="row-odd"><td>73</td>
+<td>0.5838</td>
+<td>0.7128</td>
+<td>7.2284</td>
+</tr>
+<tr class="row-even"><td>74</td>
+<td>0.5916</td>
+<td>0.6905</td>
+<td>7.3559</td>
+</tr>
+<tr class="row-odd"><td>75</td>
+<td>0.5993</td>
+<td>0.6687</td>
+<td>7.4835</td>
+</tr>
+<tr class="row-even"><td>76</td>
+<td>0.6070</td>
+<td>0.6475</td>
+<td>7.6111</td>
+</tr>
+<tr class="row-odd"><td>77</td>
+<td>0.6147</td>
+<td>0.6269</td>
+<td>7.7387</td>
+</tr>
+<tr class="row-even"><td>78</td>
+<td>0.6224</td>
+<td>0.6067</td>
+<td>7.8663</td>
+</tr>
+<tr class="row-odd"><td>79</td>
+<td>0.6301</td>
+<td>0.5871</td>
+<td>7.9939</td>
+</tr>
+<tr class="row-even"><td>80</td>
+<td>0.6378</td>
+<td>0.5679</td>
+<td>8.1215</td>
+</tr>
+<tr class="row-odd"><td>81</td>
+<td>0.6455</td>
+<td>0.5492</td>
+<td>8.2490</td>
+</tr>
+<tr class="row-even"><td>82</td>
+<td>0.6532</td>
+<td>0.5309</td>
+<td>8.3764</td>
+</tr>
+<tr class="row-odd"><td>83</td>
+<td>0.6609</td>
+<td>0.5131</td>
+<td>8.5038</td>
+</tr>
+<tr class="row-even"><td>84</td>
+<td>0.6686</td>
+<td>0.4956</td>
+<td>8.6310</td>
+</tr>
+<tr class="row-odd"><td>85</td>
+<td>0.6763</td>
+<td>0.4786</td>
+<td>8.7581</td>
+</tr>
+<tr class="row-even"><td>86</td>
+<td>0.6840</td>
+<td>0.4619</td>
+<td>8.8851</td>
+</tr>
+<tr class="row-odd"><td>87</td>
+<td>0.6917</td>
+<td>0.4456</td>
+<td>9.0119</td>
+</tr>
+<tr class="row-even"><td>88</td>
+<td>0.6994</td>
+<td>0.4297</td>
+<td>9.1385</td>
+</tr>
+<tr class="row-odd"><td>89</td>
+<td>0.7072</td>
+<td>0.4141</td>
+<td>9.2649</td>
+</tr>
+<tr class="row-even"><td>90</td>
+<td>0.7149</td>
+<td>0.3989</td>
+<td>9.3912</td>
+</tr>
+<tr class="row-odd"><td>91</td>
+<td>0.7226</td>
+<td>0.3840</td>
+<td>9.5172</td>
+</tr>
+<tr class="row-even"><td>92</td>
+<td>0.7303</td>
+<td>0.3694</td>
+<td>9.6430</td>
+</tr>
+<tr class="row-odd"><td>93</td>
+<td>0.7380</td>
+<td>0.3551</td>
+<td>9.7685</td>
+</tr>
+<tr class="row-even"><td>94</td>
+<td>0.7457</td>
+<td>0.3410</td>
+<td>9.8938</td>
+</tr>
+<tr class="row-odd"><td>95</td>
+<td>0.7534</td>
+<td>0.3273</td>
+<td>10.0188</td>
+</tr>
+<tr class="row-even"><td>96</td>
+<td>0.7611</td>
+<td>0.3139</td>
+<td>10.1436</td>
+</tr>
+<tr class="row-odd"><td>97</td>
+<td>0.7688</td>
+<td>0.3007</td>
+<td>10.2680</td>
+</tr>
+<tr class="row-even"><td>98</td>
+<td>0.7765</td>
+<td>0.2878</td>
+<td>10.3922</td>
+</tr>
+<tr class="row-odd"><td>99</td>
+<td>0.7842</td>
+<td>0.2752</td>
+<td>10.5160</td>
+</tr>
+<tr class="row-even"><td>100</td>
+<td>0.7919</td>
+<td>0.2627</td>
+<td>10.6395</td>
+</tr>
+<tr class="row-odd"><td>101</td>
+<td>0.7996</td>
+<td>0.2506</td>
+<td>10.7627</td>
+</tr>
+<tr class="row-even"><td>102</td>
+<td>0.8073</td>
+<td>0.2386</td>
+<td>10.8855</td>
+</tr>
+<tr class="row-odd"><td>103</td>
+<td>0.8150</td>
+<td>0.2269</td>
+<td>11.0081</td>
+</tr>
+<tr class="row-even"><td>104</td>
+<td>0.8228</td>
+<td>0.2154</td>
+<td>11.1302</td>
+</tr>
+<tr class="row-odd"><td>105</td>
+<td>0.8305</td>
+<td>0.2042</td>
+<td>11.2520</td>
+</tr>
+<tr class="row-even"><td>106</td>
+<td>0.8382</td>
+<td>0.1931</td>
+<td>11.3734</td>
+</tr>
+<tr class="row-odd"><td>107</td>
+<td>0.8459</td>
+<td>0.1822</td>
+<td>11.4944</td>
+</tr>
+<tr class="row-even"><td>108</td>
+<td>0.8536</td>
+<td>0.1715</td>
+<td>11.6151</td>
+</tr>
+<tr class="row-odd"><td>109</td>
+<td>0.8613</td>
+<td>0.1611</td>
+<td>11.7354</td>
+</tr>
+<tr class="row-even"><td>110</td>
+<td>0.8690</td>
+<td>0.1508</td>
+<td>11.8552</td>
+</tr>
+<tr class="row-odd"><td>111</td>
+<td>0.8767</td>
+<td>0.1406</td>
+<td>11.9747</td>
+</tr>
+<tr class="row-even"><td>112</td>
+<td>0.8844</td>
+<td>0.1307</td>
+<td>12.0938</td>
+</tr>
+<tr class="row-odd"><td>113</td>
+<td>0.8921</td>
+<td>0.1209</td>
+<td>12.2124</td>
+</tr>
+<tr class="row-even"><td>114</td>
+<td>0.8998</td>
+<td>0.1113</td>
+<td>12.3307</td>
+</tr>
+<tr class="row-odd"><td>115</td>
+<td>0.9075</td>
+<td>0.1019</td>
+<td>12.4485</td>
+</tr>
+<tr class="row-even"><td>116</td>
+<td>0.9152</td>
+<td>0.0926</td>
+<td>12.5659</td>
+</tr>
+<tr class="row-odd"><td>117</td>
+<td>0.9229</td>
+<td>0.0835</td>
+<td>12.6828</td>
+</tr>
+<tr class="row-even"><td>118</td>
+<td>0.9306</td>
+<td>0.0745</td>
+<td>12.7994</td>
+</tr>
+<tr class="row-odd"><td>119</td>
+<td>0.9383</td>
+<td>0.0657</td>
+<td>12.9155</td>
+</tr>
+<tr class="row-even"><td>120</td>
+<td>0.9461</td>
+<td>0.0570</td>
+<td>13.0311</td>
+</tr>
+<tr class="row-odd"><td>121</td>
+<td>0.9538</td>
+<td>0.0485</td>
+<td>13.1464</td>
+</tr>
+<tr class="row-even"><td>122</td>
+<td>0.9615</td>
+<td>0.0401</td>
+<td>13.2611</td>
+</tr>
+<tr class="row-odd"><td>123</td>
+<td>0.9692</td>
+<td>0.0318</td>
+<td>13.3755</td>
+</tr>
+<tr class="row-even"><td>124</td>
+<td>0.9769</td>
+<td>0.0237</td>
+<td>13.4894</td>
+</tr>
+<tr class="row-odd"><td>125</td>
+<td>0.9846</td>
+<td>0.0157</td>
+<td>13.6028</td>
+</tr>
+<tr class="row-even"><td>126</td>
+<td>0.9923</td>
+<td>0.0078</td>
+<td>13.7158</td>
+</tr>
+<tr class="row-odd"><td>127</td>
+<td>1.0000</td>
+<td>0.0000</td>
+<td>13.8283</td>
+</tr>
+</tbody>
+</table>
+</center></div>
+</div>
+<div class="section" id="zoom-in-caterpillar-halos">
+<h2>Zoom-in “Caterpillar” Halos<a class="headerlink" href="#zoom-in-caterpillar-halos" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The majority of the information about the zoom-in runs can be found in <a class="reference external" href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1509.01255">Griffen et al. (2016)</a>. Here we simply outline some details which were left out of the publication for the sake of brevity.</p>
+</div>
+<div class="section" id="id3">
+<h3>Overview<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<center><table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">~<a href="#id4"><span class="problematic" id="id5">*</span></a>Aq
+uarius
+*
+Level</th>
+<th class="head">MUSIC
+<em>level
+max</em></th>
+<th class="head">Effect
+ive
+Resolu
+tion</th>
+<th class="head">\(m_
+{dm}\
+)
+10^4
+<em>h</em>^
+-1
+\(M_
+:raw-l
+atex:`
+odot`
+\)</th>
+<th class="head">\(m_
+{dm}\
+)
+10^4
+\(M_
+:raw-l
+atex:`
+odot`
+\)</th>
+<th class="head">\(:ra
+w-late
+x:<cite>ep
+silon</cite>
+_{dm}
+\)
+pc/h</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>15</td>
+<td>32768^
+3</td>
+<td>0.25</td>
+<td>0.37</td>
+<td>36</td>
+</tr>
+<tr class="row-odd"><td><strong>2</strong></td>
+<td><strong>14</strong></td>
+<td><strong>1638
+4^3</strong></td>
+<td><strong>2</strong></td>
+<td><strong>3</strong></td>
+<td><strong>76</strong></td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>13</td>
+<td>8096^3</td>
+<td>16</td>
+<td>24</td>
+<td>152</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>12</td>
+<td>4096^3</td>
+<td>128</td>
+<td>190</td>
+<td>228</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>11</td>
+<td>2048^3</td>
+<td>1025</td>
+<td>1527</td>
+<td>452</td>
+</tr>
+</tbody>
+</table>
+</center><p>Each panel represents one single realization of the Cat-1 halo at
+different resolutions. The far left is an LX11 run and the far right is
+an LX14 run.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The LX15 run has currently only been run for one of the halos and has been temporarily paused at z = 1. This will be finished with a few others once the main suite has been completed.</p>
+</div>
+<p>We have complete (modified) rockstar halo catalogues (together with
+consistent-trees merger trees) and z = 0 subfind catalogues.</p>
+</div>
+<div class="section" id="force-softening">
+<h3>Force Softening<a class="headerlink" href="#force-softening" title="Permalink to this headline">¶</a></h3>
+<p>Softening was 1/80th the interparticle separation. We adopt the formula:
+<code class="docutils literal notranslate"><span class="pre">boxwidth/lx^2/80</span></code> but stagger the force softenings for each higher
+level as 4 x base, 8 x base, 32 x base, 64 x base where base is the base
+force softening. For each of the zooms, this equates to:</p>
+<center><table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="18%" />
+<col width="18%" />
+<col width="18%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">In Gadget</th>
+<th class="head">LX11</th>
+<th class="head">LX12</th>
+<th class="head">LX13</th>
+<th class="head">LX14</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">SofteningHalo</span></code></td>
+<td>0.000610352</td>
+<td>0.000305176</td>
+<td>0.000152588</td>
+<td>0.0000762939</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">SofteningDisk</span></code></td>
+<td>0.002441406</td>
+<td>0.001220703</td>
+<td>0.000610352</td>
+<td>0.000305176</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">SofteningBulge</span></code></td>
+<td>0.004882813</td>
+<td>0.002441406</td>
+<td>0.001220703</td>
+<td>0.000610352</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">SofteningStars</span></code></td>
+<td>0.01953125</td>
+<td>0.009765625</td>
+<td>0.004882813</td>
+<td>0.002441406</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">SofteningBndry</span></code></td>
+<td>0.0390625</td>
+<td>0.01953125</td>
+<td>0.009765625</td>
+<td>0.004882813</td>
+</tr>
+</tbody>
+</table>
+<p>units of Mpc/h</p>
+</center></div>
+<div class="section" id="id6">
+<h3>Temporal Resolution<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Timesteps are spaced logarithmically in expansion factor to z = 6, then linearly spaced in expansion factor down to z = 0. Always be aware of this as it could be strength and a weakness of your study.</p>
+</div>
+<p>This image shows the difference between the time step resolutions used
+in Caterpillar and those used in the Aquarius simulation. We wanted
+higher resolution at all redshifts for many purposes. At z &gt; 6 we wanted
+to model Lyman-Werner radiation which requires timesteps of order the
+lifespan of Population III star formation. At low redshift we wanted
+timesteps of roughly 50-60 Myrs which is the disruption time scale of
+many small dwarf galaxies of the Milky Way. This also allows detailed
+modelling of the pericentric passages of infalling satellite systems,
+which is a crucial parameter for determining post-infall mass loss, for
+example.</p>
+<center></center></div>
+<div class="section" id="contamination-study">
+<h3>Contamination Study<a class="headerlink" href="#contamination-study" title="Permalink to this headline">¶</a></h3>
+<p>A number of contamination studies have been carried out. This involves
+changing the Lagrangian geometry in some way to keep the contamination
+(distance to the nearest particle type 2 as far as possible) low whilst
+conserving CPU hours. Our selected test geometries were as follows</p>
+<center><table border="1" class="docutils">
+<colgroup>
+<col width="57%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Geomet
+ry</th>
+<th class="head">Deta
+il</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>BA</td>
+<td>Orig
+inal
+MUSI
+C
+boun
+ding
+box
+(e.g
+.
+the
+exac
+t
+boun
+ding
+box
+of
+lagr
+volu
+me).</td>
+</tr>
+<tr class="row-odd"><td>BB</td>
+<td>1.2
+boun
+ding
+box
+exte
+nt</td>
+</tr>
+<tr class="row-even"><td>BC</td>
+<td>1.4
+boun
+ding
+box
+exte
+nt</td>
+</tr>
+<tr class="row-odd"><td>BD</td>
+<td>1.6
+boun
+ding
+box
+exte
+nt</td>
+</tr>
+<tr class="row-even"><td>CA</td>
+<td>Conv
+ex
+Hull
+Volu
+me</td>
+</tr>
+<tr class="row-odd"><td>EA</td>
+<td>Orig
+inal
+MUSI
+C
+elli
+psoi
+d
+(e.g
+.
+the
+exac
+t
+boun
+ding
+box
+of
+lagr
+volu
+me).</td>
+</tr>
+<tr class="row-even"><td>EB</td>
+<td>1.1
+padd
+ing</td>
+</tr>
+<tr class="row-odd"><td>EC</td>
+<td>1.2
+padd
+ing</td>
+</tr>
+<tr class="row-even"><td>EX</td>
+<td>1.05
+padd
+ing</td>
+</tr>
+</tbody>
+</table>
+</center><p>We did this for both 4 and 5 times the virial radius at z = 0 (marked by
+the letter 4 or 5 at the end of the abbreviated geometry). Making a
+total of ~18 test halos per <em>Caterpillar</em> halo. Our requirement was that
+there was no contamation (particle type 2) within 1 Mpc of the host at
+the LX11 level.</p>
+<p>We also looked at how the geometry of the lagrangian volume affected the
+contamination radius. As outlined in Griffen et al. (2015), we did not
+find any correlation with geometry and overall level contamination.
+Every simulation requires its own tailored geometry to achieve our
+contamination requirements.</p>
+<center></center><p>The size of the lagrangian volumes were also another challenge to
+overcome. If a halo had LX11 ICs which were larger than 300mb, we found
+that we could not run these at LX14 on national facilities. The size and
+distance became our two biggest obstacles when running the <em>Caterpillar</em>
+suite.</p>
+<center></center><p>Our rockstar catalogues only use the high-resolution particles. This
+means that there will be halos in the outskirts of the simulation which
+are contaminated. These are shown clearly below. Be sure not to just
+take all halos within the rockstar catalogues as some of them will be
+contaminated (underestimated masses, wrong profiles etc.). As a safety,
+one should only take halos which are within the contamination distance.
+This changes as a function of redshift so make sure you update your cut
+for each snapshot. The plots below are for z = 0.</p>
+<center></center></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Caterpillar Collaboration.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

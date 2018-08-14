@@ -1,0 +1,554 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Codes &amp; Parameters &mdash; Caterpillar Project Docs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Caterpillar Project Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Project Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview/news.html">Documentation News &amp; Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/history_motivation.html">History &amp; Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/status.html">Current Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/policies.html">Access &amp; Authorship Policies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Technical Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="technical/sims.html">Creating The Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technical/codes.html">Codes &amp; Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technical/sams.html">Semi-analytic Models</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user/access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/datasets.html">Available Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/conventions.html">Naming Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/examples.html">Usage Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/cluster.html">Using MIT’s Compute Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/cluster.html#submitting-jobs">Submitting Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/help.html">Help &amp; Support</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Caterpillar Project Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Codes &amp; Parameters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/doc_codes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="codes-parameters">
+<h1>Codes &amp; Parameters<a class="headerlink" href="#codes-parameters" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="n-body">
+<h2>N-body<a class="headerlink" href="#n-body" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="parameters-used">
+<h3>Parameters Used<a class="headerlink" href="#parameters-used" title="Permalink to this headline">¶</a></h3>
+<p>For the simulation suite we use P-Gadget3 (first 24 halos) and Gadget4
+(remainder). The parent directory of each folder contains <code class="docutils literal notranslate"><span class="pre">.gadget3</span></code>
+or <code class="docutils literal notranslate"><span class="pre">.gadget4</span></code> to indicate which halo was run with which code. We use
+the following compile flags for our runs. <code class="docutils literal notranslate"><span class="pre">PMGRID</span></code> changes depending
+on the resolution of the run. There is a great amount of documentation
+on each of these parameters on Phil Hopkin’s <a class="reference external" href="http://www.tapir.caltech.edu/~phopkins/Site/GIZMO_files/gizmo_documentation.html">GIZMO
+website</a>.</p>
+<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PERIODIC</span>
+<span class="n">UNEQUALSOFTENINGS</span>
+<span class="n">PMGRID</span><span class="o">=</span><span class="mi">512</span>
+<span class="n">GRIDBOOST</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">PLACEHIGHRESREGION</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">ENLARGEREGION</span><span class="o">=</span><span class="mf">1.2</span>
+<span class="n">MULTIPLEDOMAINS</span><span class="o">=</span><span class="mi">16</span>
+<span class="n">PEANOHILBERT</span>
+<span class="n">WALLCLOCK</span>
+<span class="n">MYSORT</span>
+<span class="n">DOUBLEPRECISION</span>
+<span class="n">OUTPUT_IN_DOUBLEPRECISION</span>
+<span class="n">INPUT_IN_DOUBLEPRECISION</span>
+<span class="n">ORDER_SNAPSHOTS_BY_ID</span>
+<span class="n">NO_ISEND_IRECV_IN_DOMAIN</span>
+<span class="n">FIX_PATHSCALE_MPI_STATUS_IGNORE_BUG</span>
+<span class="n">COMPUTE_POTENTIAL_ENERGY</span>
+<span class="n">OUTPUTPOTENTIAL</span>
+<span class="n">RECOMPUTE_POTENTIAL_ON_OUTPUT</span>
+<span class="n">HAVE_HDF5</span>
+<span class="n">DEBUG</span>
+</pre></div>
+</div>
+<p>Parameter files for each of the runs can be found as <code class="docutils literal notranslate"><span class="pre">param.txt</span></code> in
+the relevant simulation directory. For those users who have access to
+<code class="docutils literal notranslate"><span class="pre">antares.mit.edu</span></code> (MKI’s compute cluster), Brendan Griffen’s home
+directory contains the master files (configuration files, parameter
+files and expansion factor lists for output) for the entire suite.</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">bgriffen</span><span class="o">/</span><span class="n">exec</span><span class="o">/</span><span class="n">gadget3</span>
+<span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">bgriffen</span><span class="o">/</span><span class="n">exec</span><span class="o">/</span><span class="n">gadget4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="halo-identification">
+<h2>Halo Identification<a class="headerlink" href="#halo-identification" title="Permalink to this headline">¶</a></h2>
+<p>Here you can find details about the halo identification methods we used.</p>
+<div class="section" id="rockstar">
+<h3>Rockstar<a class="headerlink" href="#rockstar" title="Permalink to this headline">¶</a></h3>
+<p>Rockstar identifies dark matter halos, substructure, and tidal features
+in phase space.The approach is based on adaptive hierarchical refinement
+of friends-of-friends groups in six dimensions, which allows for robust
+(grid-independent, shape-independent, and noise-resilient) tracking of
+substructure; as such, it is named Rockstar (Robust Overdensity
+Calculation using K-Space Topologically Adaptive Refinement). The
+“consistent trees” algorithm for generating merger trees and halo
+catalogs explicitly ensures consistency of halo properties (mass,
+position, velocity, radius) across timesteps. The algorithm has
+demonstrated the ability to increase both the completeness (through
+inserting otherwise missing halos) and purity (through removing spurious
+objects) of both merger trees and halo catalogs. In addition, the method
+is able to robustly measure the self-consistency of halo finders; it is
+the first to directly measure the uncertainties in halo positions, halo
+velocities, and the halo mass function for a given halo finder based on
+actual cosmological simulations.</p>
+<p>The code’s paper can be found <a class="reference external" href="http://arxiv.org/abs/1110.4372">here</a>.
+Documentation on getting it running and a more exhaustive documentation
+of the catalogue’s content at its <a class="reference external" href="https://bitbucket.org/gfcstanford/rockstar">Bitbucket
+Repository</a>.</p>
+<div class="section" id="iterative-unbinding">
+<h4>Iterative Unbinding<a class="headerlink" href="#iterative-unbinding" title="Permalink to this headline">¶</a></h4>
+<p>Rockstar is able to find any overdensity in 6D phase space including
+both halos and streams. To distinguish gravitationally bound halos from
+other phase space structures, Rockstar performs a single-pass energy
+calculation to determine which particles are gravitationally bound to
+the halo. Over-densities where at least 50% of the mass is
+gravitationally bound are considered halos, with the exact fraction a
+tuneable parameter <code class="docutils literal notranslate"><span class="pre">unbound_threshold</span></code> of the algorithm Behroozi et
+al. (2013).</p>
+<p>This definition is generally very effective at identifying halos and
+subhalos –&nbsp;but it fails in two important situations. First, if a
+subhalo is experiencing significant tidal stripping, the 50% cutoff can
+remove a subhalo from the catalog that should actually exist. We have
+found that changing the cutoff can recover the missing subhalos, but the
+best value of the cutoff is not easily determined. Second, Rockstar is
+occasionally <em>too</em> effective at finding substructure in our high
+resolution simulations. In particular, it often finds velocity
+substructures in the cores of our halos that are clearly spurious based
+on their mass accretion histories and density profiles. Importantly,
+these two issues do not just affect low mass subhalos, but they can also
+add or remove halos with \(V_{max}\) &gt; 25 km/s.</p>
+<p>Both of these problems can be alleviated by applying an iterative
+unbinding procedure. We have implemented such an iterative unbinding
+procedure within Rockstar. At each iteration, we remove particles whose
+kinetic energy exceeds the potential energy from other particles in that
+iteration. The potential is computed with the Rockstar Barnes-Hut method
+(see Appendix B of Behroozi et al. (2013). We iterate the unbinding
+until we obtain a self-bound set of particles. Halos are only considered
+resolved if they contain at least 20 self-bound particles. All halo
+properties are then computed as usual, but with the self-bound particles
+instead of the one-pass bound particles. The iterative unbinding
+recovers the missing subhalos and removes most but not all of the
+spurious subhalos. Across 13 of our <em>Caterpillar</em> halos, we recover 52
+halos with subhalo masses above 108 \(M_:raw-latex:<cite>odot</cite>\) which
+would have otherwise been lost using the conventional Rockstar. See
+<a class="reference external" href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1509.01255">Griffen et al.
+(2015)</a>
+for further details.</p>
+</div>
+<div class="section" id="full-particles-binary">
+<h4>Full Particles Binary<a class="headerlink" href="#full-particles-binary" title="Permalink to this headline">¶</a></h4>
+<p>Summary of changes for full particle binary output. 8/19/2014 (Alex Ji)</p>
+<p>Alex added a Rockstar option to be able to output in binary all of the
+particle ids belonging to each halo. This means there is no need to
+recursively get particles from subhalos in <code class="docutils literal notranslate"><span class="pre">RSDataReader</span></code>. It also
+means particles from subhalo fof groups that were deemed unbound or too
+small, and hence not previously written out, are now correctly written
+out to the halo they should belong to.</p>
+<p>Usage: Compiling When compiling Rockstar, use the command % make
+full_particle_binary This automatically compiles with HDF5 also.</p>
+</div>
+<div class="section" id="config-file">
+<h4>Config File<a class="headerlink" href="#config-file" title="Permalink to this headline">¶</a></h4>
+<p>In the Rockstar config file, specify
+<code class="docutils literal notranslate"><span class="pre">FULL_PARTICLE_BINARY</span> <span class="pre">=</span> <span class="pre">num</span> <span class="pre">processors</span></code> to write out full binary files
+This should be set to the same as <code class="docutils literal notranslate"><span class="pre">NUM_WRITERS</span></code>. It could be less, but
+I don’t see any reason for that. Also specify
+<code class="docutils literal notranslate"><span class="pre">DELETE_BINARY_OUTPUT_AFTER_FINISHED</span> <span class="pre">=</span> <span class="pre">1</span></code> This deletes the standard
+.bin files. The new files contain all of the same info as the old .bin
+files, so they are just a waste of space.</p>
+</div>
+<div class="section" id="reading-data">
+<h4>Reading Data<a class="headerlink" href="#reading-data" title="Permalink to this headline">¶</a></h4>
+<p>Inside <code class="docutils literal notranslate"><span class="pre">haloutils.py</span></code> we use <code class="docutils literal notranslate"><span class="pre">RSDataReader.py</span></code> version 10. There is
+now a new parameter called <code class="docutils literal notranslate"><span class="pre">total_npart</span></code> which specifies the total
+number of particles belonging to a halo, including substructure.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">get_particles_from_halo()</span></code> will now return all particles from a
+halo.</li>
+<li><code class="docutils literal notranslate"><span class="pre">get_all_particles_from_halo()</span></code> returns exactly the same thing
+except when using old version of rockstar.</li>
+</ul>
+<p>he first <code class="docutils literal notranslate"><span class="pre">npart</span></code> particles from any given halo are exactly the same
+particles you would have gotten in the original Rockstar output.</p>
+<ul class="simple">
+<li>the files now end with the extension <code class="docutils literal notranslate"><span class="pre">.fullbin</span></code> instead of <code class="docutils literal notranslate"><span class="pre">.bin</span></code></li>
+</ul>
+<p>They are ~10% larger due to the extra particles in version 10.</p>
+</div>
+<div class="section" id="changes-made-to-rockstar">
+<h4>Changes Made To Rockstar<a class="headerlink" href="#changes-made-to-rockstar" title="Permalink to this headline">¶</a></h4>
+<p>Files Modified:
+<code class="docutils literal notranslate"><span class="pre">config.template.h</span> <span class="pre">Makefile</span> <span class="pre">halo.h</span> <span class="pre">properties.c</span> <span class="pre">meta_io.c</span> <span class="pre">io_internal.c</span> <span class="pre">io_internal.h</span></code>
+In config file, will need to specify
+<code class="docutils literal notranslate"><span class="pre">FULL_PARTICLE_BINARY</span> <span class="pre">=</span> <span class="pre">num</span> <span class="pre">processors</span></code> to write out full binary files
+This config option is now added to config.template.h and by default set
+to 0. When compiling, specify the option:
+<code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">make</span> <span class="pre">full_particle_binary</span></code> defines the flag
+<code class="docutils literal notranslate"><span class="pre">FULL_PARTICLE_BINARY_FLAG</span></code> This will compile a version such that the
+halo struct has an extra parameter total_num_p, found in <code class="docutils literal notranslate"><span class="pre">halo.h</span></code>.
+It will also compile with hdf5 since this is the case we most often
+want. <code class="docutils literal notranslate"><span class="pre">total_num_p</span></code> is assigned in <code class="docutils literal notranslate"><span class="pre">properties.c</span></code> in the function
+<code class="docutils literal notranslate"><span class="pre">calc_additional_halo_props()</span></code> This corresponds to the total number of
+particles belonging to the halo, including particles assigned to fof
+groups that were not printed out (for being unbound, too small, etc.)
+The extra parameter for each halo needs to be read in with
+<code class="docutils literal notranslate"><span class="pre">RSDataReader.py</span></code> version 7. it is named ‘total_npart’ for now. In
+the file <code class="docutils literal notranslate"><span class="pre">meta_io.c</span></code>, in the function output_halos() Added another if
+statement that calls <code class="docutils literal notranslate"><span class="pre">output_full_particles_binary()</span></code> to print data as
+we want it. Function called only if <code class="docutils literal notranslate"><span class="pre">FULL_PARTICLE_BINARY</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> as
+specified in config file. Wrote <code class="docutils literal notranslate"><span class="pre">output_full_particles_binary()</span></code> to
+<code class="docutils literal notranslate"><span class="pre">io_internal.c</span></code>. It is just like <code class="docutils literal notranslate"><span class="pre">output_binary()</span></code> except it uses a
+recursive function, <code class="docutils literal notranslate"><span class="pre">print_child_particles_binary()</span></code> to print all of
+the particles, not just <code class="docutils literal notranslate"><span class="pre">num_p</span></code> of them. Declared
+<code class="docutils literal notranslate"><span class="pre">output_full_particles_binary()</span></code> in <code class="docutils literal notranslate"><span class="pre">io_internal.h</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">print_child_particles_binary()</span></code> in <code class="docutils literal notranslate"><span class="pre">io_internal.c</span></code> is my function
+which is a modification of <code class="docutils literal notranslate"><span class="pre">print_child_particles()</span></code> to recursively
+trace child halos and print their particles ids to binary, not ascii.
+<code class="docutils literal notranslate"><span class="pre">print_child_particles_binary()</span></code> did not need to be declared in any
+header file. Just written in file before function that calls it. Output
+files will now be named <code class="docutils literal notranslate"><span class="pre">halos_x.y.fullbin</span></code> x is the snap number y is
+the chunk number. Ranges from 0 to FULL_PARTICLES_BINARY-1</p>
+<p>In the halo output, <code class="docutils literal notranslate"><span class="pre">p_start</span></code> corresponds to the starting position in
+the particle array p of the processor it is on where particles are
+belonging to that halo. We write this out as <code class="docutils literal notranslate"><span class="pre">numstart</span></code> in
+<code class="docutils literal notranslate"><span class="pre">RSDataReader</span></code>. It was not used before, and now shouldn’t ever be
+used.</p>
+<p>At the moment, <code class="docutils literal notranslate"><span class="pre">cat.total_particles</span></code> will not be truly accurate. It
+will refer to the sum of npart of every halo. It would be easy to change
+this to refer to the sum of <code class="docutils literal notranslate"><span class="pre">total_npart</span></code> for each halo in
+<code class="docutils literal notranslate"><span class="pre">RSDataReader</span></code>. I don’t see a good use for <code class="docutils literal notranslate"><span class="pre">cat.total_particles</span></code>
+either way though. The binary header information will specify
+num_particles as the sum of <code class="docutils literal notranslate"><span class="pre">npart</span></code>, or <code class="docutils literal notranslate"><span class="pre">num_p</span></code>. Changing this is a
+bad idea, as it will break other parts of how Rockstar is run. To
+specify a different particle count, such as number of unique particles
+written to file, or sum of <code class="docutils literal notranslate"><span class="pre">total_num_p</span></code>, would require an extra
+parameter to the <code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">binary_output_header</span></code>, or to change
+<code class="docutils literal notranslate"><span class="pre">num_particles</span></code> just in the output. I don’t see a good use for this
+right now.</p>
+<p>Another note: Files are not written out in order to keep halo ids
+written out in order. Ex: halos.0.bin might write halos 0 – 250
+<code class="docutils literal notranslate"><span class="pre">halos.1.bin</span></code> would write out halos 1001-1250 and <code class="docutils literal notranslate"><span class="pre">halos.2.bin</span></code>
+would write out halos 251-500. This means the unsorted data[i] array in
+<code class="docutils literal notranslate"><span class="pre">RSDataReader</span></code> will not always have the property that <code class="docutils literal notranslate"><span class="pre">data[i]</span></code> is
+the halo of <code class="docutils literal notranslate"><span class="pre">id</span> <span class="pre">=</span> <span class="pre">i</span></code>.</p>
+</div>
+<div class="section" id="running-rockstar">
+<h4>Running Rockstar<a class="headerlink" href="#running-rockstar" title="Permalink to this headline">¶</a></h4>
+<p>So you have a Gadget simulation output and you want to run Rockstar on
+it  (i.e. the same version as in Caterpillar).</p>
+<p>First you’ll need a working version of Rockstar which works with the
+read modules that we will be using later. The version we used for
+Rockstar can be found <a class="reference external" href="https://bitbucket.org/alexji/rockstar">here</a>.
+The output (when put int he appropriate folders, will work with out
+modules. Be sure to also get <code class="docutils literal notranslate"><span class="pre">consistent-trees-0.9.9.2</span></code> to connect it
+all together. consistent-trees isn’t the latest version as were were a
+victum of the times; we had to go with one version, for all time.</p>
+<ol class="arabic simple">
+<li>Go to your Rockstar-hdf5 directory and run “make with_hdf5”. If it
+breaks, you need to point to the hdf5 libraries on your system.</li>
+</ol>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HDF5_FLAGS</span> <span class="o">=</span> <span class="o">-</span><span class="n">DH5_USE_16_API</span> <span class="o">-</span><span class="n">lhdf5</span> <span class="o">-</span><span class="n">DENABLE_HDF5</span> <span class="o">-</span><span class="n">I</span><span class="o">/</span><span class="n">bigbang</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">bgriffen</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">hdf5</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">10</span><span class="o">/</span><span class="n">include</span> <span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">bigbang</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">bgriffen</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">hdf5</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">10</span><span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">lhdf5</span> <span class="o">-</span><span class="n">lz</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Go to your consistent-trees directory and run “make all”.</li>
+<li>Make a folder inside your Rockstar-hdf5/ directory called “cfgs”
+where you will put your cfg files.</li>
+</ol>
+<p>The parent simulation configuration file (parent.cfg) for the MIT halos
+looks like:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PARALLEL_IO</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">PARALLEL_IO_SERVER_INTERFACE</span> <span class="o">=</span> <span class="s2">&quot;ib0&quot;</span>
+<span class="n">FORK_READERS_FROM_WRITERS</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">FORK_PROCESSORS_PER_MACHINE</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">NUM_WRITERS</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">INBASE</span> <span class="o">=</span> <span class="o">/</span><span class="n">bigbang</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">AnnaGroup</span><span class="o">/</span><span class="n">caterpillar</span><span class="o">/</span><span class="n">parent</span><span class="o">/</span><span class="n">gL100X10</span><span class="o">/</span><span class="n">outputs</span>
+<span class="n">FILENAME</span> <span class="o">=</span> <span class="n">snapdir_</span><span class="o">&lt;</span><span class="n">snap</span><span class="o">&gt;/</span><span class="n">snap_</span><span class="o">&lt;</span><span class="n">snap</span><span class="o">&gt;.&lt;</span><span class="n">block</span><span class="o">&gt;.</span><span class="n">hdf5</span>
+<span class="n">NUM_BLOCKS</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="n">FILE_FORMAT</span> <span class="o">=</span> <span class="s2">&quot;AREPO&quot;</span>
+<span class="n">FULL_PARTICLE_CHUNKS</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">OUTBASE</span><span class="o">=/</span><span class="n">bigbang</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">AnnaGroup</span><span class="o">/</span><span class="n">caterpillar</span><span class="o">/</span><span class="n">parent</span><span class="o">/</span><span class="n">gL100X10</span><span class="o">/</span><span class="n">Rockstar</span>
+<span class="n">AREPO_LENGTH_CONVERSION</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">AREPO_MASS_CONVERSION</span><span class="o">=</span><span class="mf">1e+10</span>
+<span class="n">SNAPSHOT_NAMES</span><span class="o">=/</span><span class="n">bigbang</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">AnnaGroup</span><span class="o">/</span><span class="n">caterpillar</span><span class="o">/</span><span class="n">parent</span><span class="o">/</span><span class="n">gL100X10</span><span class="o">/</span><span class="n">Rockstar</span><span class="o">/</span><span class="n">snapparent</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">FORCE_RES</span><span class="o">=</span><span class="mf">0.002</span>
+<span class="n">OUTPUT_FORMAT</span> <span class="o">=</span> <span class="s2">&quot;BOTH&quot;</span>
+</pre></div>
+</div>
+<p>You’ll have to modify this to suite your needs. This is suited for
+infiniband using 16 cores per machine and
+<code class="docutils literal notranslate"><span class="pre">NUM_WRITERS</span> <span class="pre">=</span> <span class="pre">Nnodes*Ncores</span></code> being used. <code class="docutils literal notranslate"><span class="pre">NUM_BLOCKS</span></code> is also for
+the number of input files for a given snapshot which you specified for
+Gadget. You can leave it as <code class="docutils literal notranslate"><span class="pre">AREPO</span></code> as this is just default for using
+the HDF5 snapshots. You just need to make sure you set the <code class="docutils literal notranslate"><span class="pre">LENGTH</span></code>
+and <code class="docutils literal notranslate"><span class="pre">MASS</span></code> conversions correctly. The ones above are native for
+<code class="docutils literal notranslate"><span class="pre">P-Gadget3</span></code>. Be also sure to get <code class="docutils literal notranslate"><span class="pre">FORCE_RES</span></code> or force softening
+correct. Here we use 1/40 times the mean inter-particle separation or
+(1/40)*boxwidth/(np)^(1/3) which in our case is 100/2^10/40 ~ 0.002. If
+you have the space, I would suggest leaving OUTPUT_FORMAT to be BOTH.
+You can clean up the files you don’t want later. Snapshot names is just
+a file listing the snapshot names <code class="docutils literal notranslate"><span class="pre">000,001,002</span> <span class="pre">...</span></code> up to the number
+of snaps, 127 in this case.</p>
+<ol class="arabic simple" start="4">
+<li>You will then have to submit the Rockstar run to the cluster. For a
+cluster like Stampede or other SLURM build systems you can adapt the
+following:</li>
+</ol>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
+#SBATCH -o parentrock.o%j
+#SBATCH -e parentrock.e%j
+#SBATCH -t 48:00:00
+#SBATCH -p normal
+#SBATCH --mail-user=bgriffen@mit.edu
+#SBATCH -J parentrock
+#SBATCH --mail-type=ALL
+#SBATCH -n 512
+
+module load hdf5
+
+rsdir=/home1/02670/bgriffen/Rockstar
+exe=/home1/02670/bgriffen/Rockstar/rockstar
+
+cd $rsdir
+outdir=/scratch/02670/bgriffen/gL100X10/Rockstar
+
+$exe -c $rsdir/cfgs/parent.cfg &amp;
+#$exe -c $outdir/restart.cfg &amp; #only use for restarting the run, comment line above.
+cd $outdir
+perl -e &#39;sleep 1 while (!(-e &quot;auto-rockstar.cfg&quot;))&#39;
+srun -n 512 $exe -c auto-rockstar.cfg
+</pre></div>
+</div>
+<p>If you are running on PBS, please email <a class="reference external" href="mailto:brendan&#46;f&#46;griffen&#37;&#52;&#48;gmail&#46;com">Brendan
+Griffen</a> for a PBS version which works
+just as well.</p>
+</div>
+</div>
+<div class="section" id="subfind">
+<h3>SUBFIND<a class="headerlink" href="#subfind" title="Permalink to this headline">¶</a></h3>
+<p>For a nice summary of how SUBFIND works, please see <a class="reference external" href="http://popia.ft.uam.es/public/HaloesGoingMAD/PRESENTATIONS/Subfind-FIannuzzi.pdf">this
+talk</a>
+by Volker Springel, the code author.</p>
+<p>To access the SUBFIND catalogues and associated smoothing lengths for
+the particles, head to any <em>Caterpillar</em> halo directory on
+<code class="docutils literal notranslate"><span class="pre">bigbang.mit.edu</span></code>. There you will find the following:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H1387186_EB_Z127_P7_LN7_LX14_O4_NV4</span>
+ <span class="o">-&gt;</span> <span class="n">outputs</span><span class="o">/</span>      <span class="c1"># gadget raw snapshot output (particle data)</span>
+  <span class="o">-&gt;</span> <span class="n">groups_319</span><span class="o">/</span>  <span class="c1"># the subfind catalogues are also stored (mostly for the last snapshot)</span>
+  <span class="o">-&gt;</span> <span class="n">hsmldir_319</span><span class="o">/</span> <span class="c1"># the smoothing lengths for the corresponding particle data</span>
+ <span class="o">-&gt;</span> <span class="n">analysis</span><span class="o">/</span>     <span class="c1"># post-processed output files (halo profiles, mass functions, minihalos etc.)</span>
+</pre></div>
+</div>
+<p>See Data Access to load the SUBFIND catalogues.</p>
+</div>
+</div>
+<div class="section" id="merger-trees">
+<h2>Merger Trees<a class="headerlink" href="#merger-trees" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="consistent-trees">
+<h3>consistent-trees<a class="headerlink" href="#consistent-trees" title="Permalink to this headline">¶</a></h3>
+<p>The code’s paper can be found <a class="reference external" href="http://arxiv.org/abs/1110.4370">here</a>.
+Documentation on getting it running and a more exhaustive documentation
+of the catalogue’s content at its <a class="reference external" href="https://bitbucket.org/pbehroozi/consistent-trees">Bitbucket
+Repository</a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Caterpillar Collaboration.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

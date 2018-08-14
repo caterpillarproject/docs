@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Analysis Modules &mdash; Caterpillar Project Docs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Understanding The Data" href="doc_understanding_the_data.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Caterpillar Project Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Caterpillar Project Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_history_motivation.html">History &amp; Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_project_status.html">Current Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_sam_progress.html">Semi-analytic Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_sims.html">Simulation Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="policies.html">Access &amp; Authorship Policies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Analysis Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_understanding_the_data.html">Understanding The Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_data_access_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_gadget.html">Gadget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_rockstar.html">Rockstar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_subfind.html">SUBFIND</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_consistenttrees.html">consistent-trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_mit_cluster.html">MIT Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_mit_cluster.html#where-is-the-data-actually-stored">Where is the data <em>actually</em> stored?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_submitting_jobs.html">Submitting Jobs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Caterpillar Project Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Analysis Modules</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/doc_modules_and_analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analysis-modules">
+<h1>Analysis Modules<a class="headerlink" href="#analysis-modules" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Read the <a class="reference external" href="https://github.com/caterpillarproject/wiki/wiki/Cluster-Information">cluster
+information</a>.</li>
+<li>Keep in mind: <code class="docutils literal notranslate"><span class="pre">bigbang.mit.edu</span></code> (our group box) is where you want
+to do your analysis, access data etc. and <code class="docutils literal notranslate"><span class="pre">antares.mit.edu</span></code> is the
+login node for the cluster for the whole Institute. Remember:
+analysis = bigbang, jobs = antares! See Compute Cluster Information
+in the sidebar for more detail on these two machines and how the data
+is actually distributed.</li>
+<li>Get our modules from the <a class="reference external" href="https://github.com/caterpillarproject">Caterpillar Project github
+page</a>. These include the
+following two critical libraries:</li>
+</ul>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">caterpillarproject</span><span class="o">/</span><span class="n">modules</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">caterpillarproject</span><span class="o">/</span><span class="n">analysis</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>You can obtain them in the following way (ensure you are in the
+directory you want them to be placed):</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">caterpillarproject</span><span class="o">/</span><span class="n">modules</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>(sorry we dont have any support for IDL or Matlab at this time - please
+share any you develop!)</p>
+<ul class="simple">
+<li>Add the following to your <code class="docutils literal notranslate"><span class="pre">.cshrc</span></code> file.</li>
+</ul>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span>setenv PYTHONPATH /path/to/modules:$PYTHONPATH
+</pre></div>
+</div>
+<ul class="simple">
+<li>Install the <a class="reference external" href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>
+python distribution and be sure to run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span></code> periodically.
+You can also</li>
+<li>You will also need <code class="docutils literal notranslate"><span class="pre">asciitable</span></code>, <code class="docutils literal notranslate"><span class="pre">h5py</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to make
+full use of our module package. You can install some of these
+packages with Anaconda by <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code>, for example. If
+that fails, simply do <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code> etc. to install each
+of these. When you open <code class="docutils literal notranslate"><span class="pre">ipython</span></code>, you should be able to import
+each of these - please make sure you can before importing the
+modules!</li>
+</ul>
+<p>You’re now ready to roll!</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="doc_understanding_the_data.html" class="btn btn-neutral float-right" title="Understanding The Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting_started.html" class="btn btn-neutral" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Caterpillar Collaboration.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,860 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>consistent-trees &mdash; Caterpillar Project Docs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Caterpillar Project Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Project Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_history_motivation.html">History &amp; Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_project_status.html">Current Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../policies.html">Access &amp; Authorship Policies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Technical Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc_sims.html">Creating The Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_codes.html">Codes &amp; Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_sam_progress.html">Semi-analytic Models</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../docs_datasets.html">Available Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs_naming_conventions.html">Naming Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_data_access_examples.html">Usage Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_mit_cluster.html">Using MIT’s Compute Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_mit_cluster.html#submitting-jobs">Submitting Jobs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caterpillar Project Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>consistent-trees</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/original/doc_consistenttrees.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="consistent-trees">
+<h1>consistent-trees<a class="headerlink" href="#consistent-trees" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The code’s paper can be found <a class="reference external" href="http://arxiv.org/abs/1110.4370">here</a>.
+Documentation on getting it running and a more exhaustive documentation
+of the catalogue’s content at its <a class="reference external" href="https://bitbucket.org/pbehroozi/consistent-trees">Bitbucket
+Repository</a>.</p>
+</div>
+<div class="section" id="catalogue-parameters">
+<h2>Catalogue Parameters<a class="headerlink" href="#catalogue-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The consistent-trees output it similar to that of the rockstar catalogue
+except now there are additional paramters which connect the halos in
+time.</p>
+<center><table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="36%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">variab
+le</th>
+<th class="head">units</th>
+<th class="head">defi
+niti
+on</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">id</span></code></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>id
+of
+the
+halo
+in
+the
+merg
+er
+tree</td>
+</tr>
+<tr class="row-odd"><td><a href="#id1"><span class="problematic" id="id2">``</span></a>pid`
+`</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>the
+next
+leve
+l
+up
+halo
+if
+the
+halo
+is a
+subh
+alo
+(oth
+erwi
+se
+-1)</td>
+</tr>
+<tr class="row-even"><td><a href="#id3"><span class="problematic" id="id4">``</span></a>upid
+``</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>the
+ID
+of
+the
+uppe
+rmos
+t
+leve
+l
+of
+the
+halo
+if
+the
+halo
+is a
+subh
+alo
+(oth
+erwi
+se
+-1)</td>
+</tr>
+<tr class="row-odd"><td><a href="#id5"><span class="problematic" id="id6">``</span></a>bfid
+``</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>brea
+dth
+firs
+t
+orde
+r
+id</td>
+</tr>
+<tr class="row-even"><td><a href="#id7"><span class="problematic" id="id8">``</span></a>dfid
+``</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>dept
+h
+firs
+t
+orde
+r
+id</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">orig</span>
+<span class="pre">id</span></code></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>orig
+inal
+id
+as
+iden
+tifi
+ed
+in
+Rock
+star
+cata
+logu
+e</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">last</span>
+<span class="pre">prog_d</span>
+<span class="pre">fid</span></code></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>last
+prog
+enit
+or
+dept
+h
+firs
+t
+id</td>
+</tr>
+<tr class="row-odd"><td><a href="#id9"><span class="problematic" id="id10">``</span></a>snap
+``</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>snap
+shot</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">scal</span>
+<span class="pre">e</span></code></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>scal
+e
+fact
+or</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">desc</span>
+<span class="pre">_id</span></code></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>desc
+enda
+nt
+id</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">num_</span>
+<span class="pre">prog</span></code></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>numb
+er
+of
+prog
+enit
+ors</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">phan</span>
+<span class="pre">tom</span></code></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>Nonz
+ero
+if
+the
+halo
+is a
+“pha
+ntom
+”
+halo
+,
+i.e.
+a
+halo
+not
+foun
+d
+by
+Rock
+star
+but
+inse
+rted
+by
+cons
+iste
+nt-t
+rees
+to
+link
+time
+step
+s</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">sam_</span>
+<span class="pre">mvir</span></code></td>
+<td>Msol/h</td>
+<td>smoo
+thed
+viri
+al
+mass</td>
+</tr>
+<tr class="row-odd"><td><a href="#id11"><span class="problematic" id="id12">``</span></a>mvir
+``</td>
+<td>Msol/h</td>
+<td>viri
+al
+mass
+(Bri
+an
+&amp;
+Norm
+an
+pres
+crip
+tion
+)
+(it
+is
+actu
+ally
+mgra
+v
+from
+Rock
+star
+)</td>
+</tr>
+<tr class="row-even"><td><a href="#id13"><span class="problematic" id="id14">``</span></a>rvir
+``</td>
+<td>kpc</td>
+<td>viri
+al
+radi
+us
+(Bri
+an
+&amp;
+Norm
+an
+pres
+crip
+tion
+)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">rs</span></code></td>
+<td>kpc</td>
+<td>scal
+e
+radi
+us</td>
+</tr>
+<tr class="row-even"><td><a href="#id15"><span class="problematic" id="id16">``</span></a>vrms
+``</td>
+<td>km/s</td>
+<td>rms
+velo
+city</td>
+</tr>
+<tr class="row-odd"><td><a href="#id17"><span class="problematic" id="id18">``</span></a>mmp`
+`</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>most
+mass
+ive
+prog
+enit
+or</td>
+</tr>
+<tr class="row-even"><td><a href="#id19"><span class="problematic" id="id20">``</span></a>scal
+e_of_l
+ast_MM
+``</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>scal
+e
+fact
+or
+of
+last
+majo
+r
+merg
+er</td>
+</tr>
+<tr class="row-odd"><td><a href="#id21"><span class="problematic" id="id22">``</span></a>vmax
+``</td>
+<td>km/s</td>
+<td>maxi
+mum
+circ
+ular
+velo
+city</td>
+</tr>
+<tr class="row-even"><td><a href="#id23"><span class="problematic" id="id24">``</span></a>posX
+``</td>
+<td>kpc</td>
+<td>x-po
+siti
+on</td>
+</tr>
+<tr class="row-odd"><td><a href="#id25"><span class="problematic" id="id26">``</span></a>posY
+``</td>
+<td>kpc</td>
+<td>y-po
+siti
+on</td>
+</tr>
+<tr class="row-even"><td><a href="#id27"><span class="problematic" id="id28">``</span></a>posZ
+``</td>
+<td>kpc</td>
+<td>z-po
+siti
+on</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">pecV</span>
+<span class="pre">X</span></code></td>
+<td>km/s</td>
+<td>x-di
+r
+pecu
+liar
+velo
+city</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">pecV</span>
+<span class="pre">Y</span></code></td>
+<td>km/s</td>
+<td>y-di
+r
+pecu
+liar
+velo
+city</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">pecV</span>
+<span class="pre">Z</span></code></td>
+<td>km/s</td>
+<td>z-di
+r
+pecu
+liar
+velo
+city</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Jx</span></code></td>
+<td>&#160;</td>
+<td>x-co
+mpon
+ent
+angu
+lar
+mome
+ntum</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Jy</span></code></td>
+<td>&#160;</td>
+<td>y-co
+mpon
+ent
+angu
+lar
+mome
+ntum</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Jz</span></code></td>
+<td>&#160;</td>
+<td>z-co
+mpon
+ent
+angu
+lar
+mome
+ntum</td>
+</tr>
+<tr class="row-odd"><td><a href="#id29"><span class="problematic" id="id30">``</span></a>spin
+``</td>
+<td>&#160;</td>
+<td>spin
+para
+mete
+r
+(Pee
+bles
+vers
+ion)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">spin</span>
+<span class="pre">_bullo</span>
+<span class="pre">ck</span></code></td>
+<td>&#160;</td>
+<td>spin
+para
+mete
+r
+(Bul
+lock
+modi
+fied
+vers
+ion)</td>
+</tr>
+<tr class="row-odd"><td><a href="#id31"><span class="problematic" id="id32">``</span></a>m200
+c_all`
+`</td>
+<td>Msol/h</td>
+<td>viri
+al
+mass
+of
+all
+part
+icle
+s
+base
+d
+on
+200x
+crit
+ical
+dens
+ity</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">m200</span>
+<span class="pre">b</span></code></td>
+<td>Msol/h</td>
+<td>viri
+al
+mass
+of
+all
+part
+icle
+s
+base
+d
+on
+200x
+back
+grou
+nd
+dens
+ity</td>
+</tr>
+<tr class="row-odd"><td><a href="#id33"><span class="problematic" id="id34">``</span></a>xoff
+``</td>
+<td>kpc</td>
+<td>Posi
+tion
+offs
+et
+para
+mete
+r
+abs(
+cent
+er
+of
+mass
+posi
+tion
+-
+halo
+posi
+tion
+)</td>
+</tr>
+<tr class="row-even"><td><a href="#id35"><span class="problematic" id="id36">``</span></a>voff
+``</td>
+<td>kpc</td>
+<td>Velo
+city
+offs
+et
+para
+mete
+r
+abs(
+cent
+er
+of
+mass
+velo
+city
+-
+halo
+velo
+city
+)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">b_to</span>
+<span class="pre">_a(500</span>
+<span class="pre">c)</span></code></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>Halo
+elli
+ptic
+ity
+b/a</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">c_to</span>
+<span class="pre">_a(500</span>
+<span class="pre">c)</span></code></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>Halo
+elli
+ptic
+ity
+c/a</td>
+</tr>
+<tr class="row-odd"><td><a href="#id37"><span class="problematic" id="id38">``</span></a>A[x]
+(500c)
+``</td>
+<td>&#160;</td>
+<td>x-ax
+is
+for
+elli
+ptic
+ity</td>
+</tr>
+<tr class="row-even"><td><a href="#id39"><span class="problematic" id="id40">``</span></a>A[y]
+(500c)
+``</td>
+<td>&#160;</td>
+<td>y-xi
+s
+for
+elli
+ptic
+ity</td>
+</tr>
+<tr class="row-odd"><td><a href="#id41"><span class="problematic" id="id42">``</span></a>A[z]
+(500c)
+``</td>
+<td>&#160;</td>
+<td>z-xi
+s
+for
+elli
+ptic
+ity</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">T/ab</span>
+<span class="pre">s(U)</span></code></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>Viri
+al
+rati
+o
+(kin
+etic
+/abs
+(pot
+enti
+al))</td>
+</tr>
+</tbody>
+</table>
+</center></div>
+<div class="section" id="halo-ordering">
+<h2>Halo Ordering<a class="headerlink" href="#halo-ordering" title="Permalink to this headline">¶</a></h2>
+<p>As listed in the previous table, <code class="docutils literal notranslate"><span class="pre">consistent-trees</span></code> outputs two
+indexes for the connecting the halos, (1) depth-first ordered or (2)
+breadth-first ordered. The graphic below indicates what the fundamental
+differences are between these two methods.</p>
+<center></center></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Caterpillar Collaboration.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

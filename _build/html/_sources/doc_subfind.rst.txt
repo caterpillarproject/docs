@@ -1,0 +1,20 @@
+SUBFIND
+========================
+
+For a nice summary of how SUBFIND works, please see `this
+talk <http://popia.ft.uam.es/public/HaloesGoingMAD/PRESENTATIONS/Subfind-FIannuzzi.pdf>`__
+by Volker Springel, the code author.
+
+To access the SUBFIND catalogues and associated smoothing lengths for
+the particles, head to any *Caterpillar* halo directory on
+``bigbang.mit.edu``. There you will find the following:
+
+.. code:: bash
+
+    H1387186_EB_Z127_P7_LN7_LX14_O4_NV4
+     -> outputs/      # gadget raw snapshot output (particle data)
+      -> groups_319/  # the subfind catalogues are also stored (mostly for the last snapshot)
+      -> hsmldir_319/ # the smoothing lengths for the corresponding particle data
+     -> analysis/     # post-processed output files (halo profiles, mass functions, minihalos etc.)
+
+See Data Access to load the SUBFIND catalogues.

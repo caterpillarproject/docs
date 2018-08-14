@@ -1,0 +1,419 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Gadget &mdash; Caterpillar Project Docs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Rockstar" href="doc_rockstar.html" />
+    <link rel="prev" title="Examples" href="doc_data_access_examples.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Caterpillar Project Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Caterpillar Project Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_history_motivation.html">History &amp; Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_project_status.html">Current Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_sam_progress.html">Semi-analytic Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_sims.html">Simulation Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="policies.html">Access &amp; Authorship Policies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_modules_and_analysis.html">Analysis Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_understanding_the_data.html">Understanding The Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_data_access_examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gadget</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-blocks-in-the-gadget-files">Data Blocks In The Gadget Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="doc_rockstar.html">Rockstar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_subfind.html">SUBFIND</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_consistenttrees.html">consistent-trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_mit_cluster.html">MIT Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_mit_cluster.html#where-is-the-data-actually-stored">Where is the data <em>actually</em> stored?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc_submitting_jobs.html">Submitting Jobs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Caterpillar Project Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Gadget</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/doc_gadget.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gadget">
+<h1>Gadget<a class="headerlink" href="#gadget" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>For the simulation suite we use P-Gadget3 (first 24 halos) and Gadget4
+(remainder). The parent directory of each folder contains <code class="docutils literal notranslate"><span class="pre">.gadget3</span></code>
+or <code class="docutils literal notranslate"><span class="pre">.gadget4</span></code> to indicate which halo was run with which code. We use
+the following compile flags for our runs. <code class="docutils literal notranslate"><span class="pre">PMGRID</span></code> changes depending
+on the resolution of the run. There is a great amount of documentation
+on each of these parameters on Phil Hopkin’s <a class="reference external" href="http://www.tapir.caltech.edu/~phopkins/Site/GIZMO_files/gizmo_documentation.html">GIZMO
+website</a>.</p>
+<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PERIODIC</span>
+<span class="n">UNEQUALSOFTENINGS</span>
+<span class="n">PMGRID</span><span class="o">=</span><span class="mi">512</span>
+<span class="n">GRIDBOOST</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">PLACEHIGHRESREGION</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">ENLARGEREGION</span><span class="o">=</span><span class="mf">1.2</span>
+<span class="n">MULTIPLEDOMAINS</span><span class="o">=</span><span class="mi">16</span>
+<span class="n">PEANOHILBERT</span>
+<span class="n">WALLCLOCK</span>
+<span class="n">MYSORT</span>
+<span class="n">DOUBLEPRECISION</span>
+<span class="n">OUTPUT_IN_DOUBLEPRECISION</span>
+<span class="n">INPUT_IN_DOUBLEPRECISION</span>
+<span class="n">ORDER_SNAPSHOTS_BY_ID</span>
+<span class="n">NO_ISEND_IRECV_IN_DOMAIN</span>
+<span class="n">FIX_PATHSCALE_MPI_STATUS_IGNORE_BUG</span>
+<span class="n">COMPUTE_POTENTIAL_ENERGY</span>
+<span class="n">OUTPUTPOTENTIAL</span>
+<span class="n">RECOMPUTE_POTENTIAL_ON_OUTPUT</span>
+<span class="n">HAVE_HDF5</span>
+<span class="n">DEBUG</span>
+</pre></div>
+</div>
+<p>Parameter files for each of the runs can be found as <code class="docutils literal notranslate"><span class="pre">param.txt</span></code> in
+the relevant simulation directory. For those users who have access to
+<code class="docutils literal notranslate"><span class="pre">antares.mit.edu</span></code> (MKI’s compute cluster), Brendan Griffen’s home
+directory contains the master files (configuration files, parameter
+files and expansion factor lists for output) for the entire suite.</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">bgriffen</span><span class="o">/</span><span class="n">exec</span><span class="o">/</span><span class="n">gadget3</span>
+<span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">bgriffen</span><span class="o">/</span><span class="n">exec</span><span class="o">/</span><span class="n">gadget4</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-blocks-in-the-gadget-files">
+<h2>Data Blocks In The Gadget Files<a class="headerlink" href="#data-blocks-in-the-gadget-files" title="Permalink to this headline">¶</a></h2>
+<p>See Data Access Examples to see how to load each of these blocks. One
+such way is:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">haloutils</span> <span class="k">as</span> <span class="nn">htils</span>
+<span class="n">hpath</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_paper_paths_lx</span><span class="p">(</span><span class="mi">14</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">zoomid</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_zoomid</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+<span class="n">blockname</span> <span class="o">=</span> <span class="s2">&quot;POS &quot;</span> <span class="c1"># NOTE THE EXTRA SPACE!</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_partblock</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">zoomid</span><span class="p">,</span><span class="n">blockname</span><span class="p">,</span><span class="n">partids</span><span class="o">=</span><span class="p">[</span><span class="n">listofids</span><span class="p">])</span> <span class="c1"># units Mpc/h</span>
+</pre></div>
+</div>
+<p>{{site.data.alerts.tip}} Make sure you include the right number of
+spaces (4) otherwise you will get an error when trying to read the
+blocks.{{site.data.alerts.end}}</p>
+<p>Other blocks you have access to are listed below:</p>
+<center><table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="21%" />
+<col width="24%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Block
+Name</th>
+<th class="head">Descr
+iptio
+n</th>
+<th class="head">Units</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ID</span></code></td>
+<td>ID
+numbe
+r
+(N)</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>–</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">POS</span></code></td>
+<td>posit
+ion
+(Nx3)</td>
+<td>comovi
+ng
+Mpc/h</td>
+<td>They
+are all
+around
+~50
+Mpc/h
+as they
+are in
+the
+center
+of the
+100
+Mpc/h
+box for
+the
+resimul
+ations.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">VEL</span></code></td>
+<td>veloc
+ity
+(Nx3)</td>
+<td>spatia
+l
+km\(:
+raw-la
+tex:<a href="#id1"><span class="problematic" id="id2">`</span></a>sqrt`(
+a)\)/
+s</td>
+<td>Spatial
+velocit
+y.
+The
+peculia
+r
+velocit
+y
+is
+obtaine
+d
+by
+multipl
+ying
+this
+value
+by
+\(:raw
+-latex:
+<cite>sqrt</cite>
+(a)\).</td>
+</tr>
+<tr class="row-odd"><td><a href="#id3"><span class="problematic" id="id4">``</span></a>MASS`
+`</td>
+<td>parti
+cle
+mass
+(N)</td>
+<td>Msol/h</td>
+<td>Use
+<code class="docutils literal notranslate"><span class="pre">heade</span>
+<span class="pre">r.massa</span>
+<span class="pre">rr[1]*1</span>
+<span class="pre">e10</span></code>
+as it
+is
+faster
+than
+reading
+in the
+entire
+block.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">POT</span></code></td>
+<td>poten
+tial
+energ
+y</td>
+<td>—</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</center><p>{{site.data.alerts.warning}} Remember to use the scale factor for the
+snapshot you are working on to convert the comoving quantities to
+physical. For z = 0, it doesn’t matter.{{site.data.alerts.end}}</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="doc_rockstar.html" class="btn btn-neutral float-right" title="Rockstar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="doc_data_access_examples.html" class="btn btn-neutral" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Caterpillar Collaboration.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

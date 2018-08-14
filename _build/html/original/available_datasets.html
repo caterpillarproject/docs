@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Available Data &mdash; Caterpillar Project Docs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Caterpillar Project Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Caterpillar Project Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_history_motivation.html">History &amp; Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_project_status.html">Current Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_sam_progress.html">Semi-analytic Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_sims.html">Simulation Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../policies.html">Access &amp; Authorship Policies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_modules_and_analysis.html">Analysis Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_understanding_the_data.html">Understanding The Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_data_access_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_gadget.html">Gadget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_rockstar.html">Rockstar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_subfind.html">SUBFIND</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_consistenttrees.html">consistent-trees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_mit_cluster.html">MIT Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_mit_cluster.html#where-is-the-data-actually-stored">Where is the data <em>actually</em> stored?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc_submitting_jobs.html">Submitting Jobs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caterpillar Project Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Available Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/original/available_datasets.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="available-data">
+<h1>Available Data<a class="headerlink" href="#available-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subhalo-catalogue-information">
+<h2>Subhalo Catalogue Information<a class="headerlink" href="#subhalo-catalogue-information" title="Permalink to this headline">¶</a></h2>
+<p>### Data Description
+In each of the halo <cite>analysis/</cite> subdirectories we have extant and destroyed catalogue information for the subhalos of the main host.</p>
+<p>We have all halo information at three different times:</p>
+<ul class="simple">
+<li>max \(M_{vir}\): the peak mass the halo reaches along its main branch</li>
+<li>infall: the halo just as it crosses the virial radius of the main host halo.</li>
+<li>peak \(V_{max}\): the halo at the maximum of \(V_{max}\) along its main branch (i.e. the highest \(V_{max}\) its ever had).</li>
+</ul>
+<p>In the catalogues these variables are prepended with <cite>max_</cite>, <cite>infall_</cite> and <cite>peak_</cite>. The full list of variables accessible in these catalogues are as follows:</p>
+<p>These are the quantites at maximum mass:</p>
+<p>&lt;center&gt;</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Variable |</div>
+<div class="line">:—-: |</div>
+</div>
+<div class="line">max_mass_rsid  |</div>
+<div class="line">max_mass_snap  |</div>
+<div class="line">max_mass_vmax  |</div>
+<div class="line">max_mass  |</div>
+<div class="line">max_mass_posx  |</div>
+<div class="line">max_mass_posy  |</div>
+<div class="line">max_mass_posz  |</div>
+<div class="line">max_mass_pecvx  |</div>
+<div class="line">max_mass_pecvy  |</div>
+<div class="line">max_mass_pecvz  |</div>
+<div class="line">max_mass_virialratio  |</div>
+<div class="line">max_mass_hostid_MT  |</div>
+<div class="line">max_mass_rvir  |</div>
+<div class="line">max_mass_spinbullock  |</div>
+<div class="line">max_mass_rs  |</div>
+<div class="line">max_mass_scale_of_last_MM  |</div>
+<div class="line">max_mass_Jx  |</div>
+<div class="line">max_mass_Jy  |</div>
+<div class="line">max_mass_Jz  |</div>
+<div class="line">max_mass_xoff  |</div>
+</div>
+<p>&lt;/center&gt;</p>
+<p>These are the quantities At \(V_{peak}\):</p>
+<p>&lt;center&gt;</p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">Variable |</div>
+<div class="line">:—-: |</div>
+</div>
+<div class="line">peak_rsid  |</div>
+<div class="line">peak_snap  |</div>
+<div class="line">peak_vmax  |</div>
+<div class="line">peak_mvir  |</div>
+<div class="line">peak_posx  |</div>
+<div class="line">peak_posy  |</div>
+<div class="line">peak_posz  |</div>
+<div class="line">peak_pecvx  |</div>
+<div class="line">peak_pecvy  |</div>
+<div class="line">peak_pecvz  |</div>
+<div class="line">peak_virialratio  |</div>
+<div class="line">peak_hostid_MT  |</div>
+<div class="line">peak_rvir  |</div>
+<div class="line">peak_spinbullock  |</div>
+<div class="line">peak_rs  |</div>
+<div class="line">peak_scale_of_last_MM  |</div>
+<div class="line">peak_Jx  |</div>
+<div class="line">peak_Jy  |</div>
+<div class="line">peak_Jz  |</div>
+<div class="line">peak_xoff  |</div>
+<div class="line">peak_mgrav  |</div>
+<div class="line">peak_corevelx  |</div>
+<div class="line">peak_corevely  |</div>
+<div class="line">peak_corevelz  |</div>
+<div class="line">peak_hostid_RS  |</div>
+<div class="line">peak_rvmax  |</div>
+</div>
+<p>&lt;/center&gt;</p>
+<p>These are the quantities at infall:</p>
+<p>&lt;center&gt;</p>
+<div class="line-block">
+<div class="line">Variable  |</div>
+<div class="line-block">
+<div class="line">:—-: |</div>
+</div>
+<div class="line">infall_rsid  |</div>
+<div class="line">infall_snap  |</div>
+<div class="line">infall_vmax  |</div>
+<div class="line">infall_mvir  |</div>
+<div class="line">infall_posx  |</div>
+<div class="line">infall_posy  |</div>
+<div class="line">infall_posz  |</div>
+<div class="line">infall_pecvx  |</div>
+<div class="line">infall_pecvy  |</div>
+<div class="line">infall_pecvz  |</div>
+<div class="line">infall_virialratio  |</div>
+<div class="line">infall_hostid_MT  |</div>
+<div class="line">infall_rvir  |</div>
+<div class="line">infall_spinbullock  |</div>
+<div class="line">infall_rs  |</div>
+<div class="line">infall_scale_of_last_MM  |</div>
+<div class="line">infall_Jx  |</div>
+<div class="line">infall_Jy  |</div>
+<div class="line">infall_Jz  |</div>
+<div class="line">infall_xoff  |</div>
+<div class="line">infall_mgrav  |</div>
+<div class="line">infall_hostid_RS  |</div>
+<div class="line">infall_rvmax  |</div>
+<div class="line">infall_corevelx  |</div>
+<div class="line">infall_corevely  |</div>
+<div class="line">infall_corevelz  |</div>
+</div>
+<p>&lt;/center&gt;</p>
+<p>Here are some extra variables:</p>
+<p>&lt;center&gt;</p>
+<div class="line-block">
+<div class="line">Variable | Description |</div>
+<div class="line-block">
+<div class="line">:—-: | :—-: |</div>
+</div>
+<div class="line">Unnamed  | -  |</div>
+<div class="line">sub_rank  |  uniquely labels all halos, unless they merged with another subhalo in the catalog. In such a case the sub_rank is the negative of the one it ultimately merged with |</div>
+<div class="line">rsid  | present day rockstar id  |</div>
+<div class="line">backsnap  | the last time a halo is in the merger tree before merging |</div>
+<div class="line">depth  | number of mergers of the satellite until a z=0 halo |</div>
+<div class="line">nstars  | number of tagged particles  |</div>
+<div class="line">start_pos  |    |</div>
+</div>
+<p>&lt;/center&gt;
+Note: extant halos all have a ‘backsnap’ of 319, and the destroyed are all &lt; 319</p>
+<p>The extant data and destroyed data sets have the same columns and  can thus be combined. The extant data now recursively trace halos that fell into the host, then merged with an extant sub which they did not before. Also, the data includes systems that exist but don’t have a proper infall time (formed within the virial radius, or don’t have a good merger tree that far back). All the infall properties are set to -1 in such cases. There is a ‘depth’ column which tells you the number of mergers of the satellite until a z=0 halo. e.g. a subhalo mergers with a subhalo which merges with an extant halo has a depth of 2.</p>
+<p>The ‘sub_rank’ column uniquely labels all halos, unless they merged with another subhalo in the catalog. In such a case the sub_rank is the negative of the one it ultimately merged with. So you can quickly find all subhalos that ever merged with a particular extant, or depth=1 destroyed subhalo.</p>
+</div>
+<div class="section" id="data-access">
+<h2>Data Access<a class="headerlink" href="#data-access" title="Permalink to this headline">¶</a></h2>
+<p>You can access the data with the following Python functions straight from the <cite>analysis</cite> directory.</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>python
+import pandas as pd
+import haloutils as htils</p>
+<p># get a random halo path
+hpath = htils.get_paper_paths_lx(14)[0]</p>
+<p># for reading AllExtantData:
+def read(hpath):</p>
+<blockquote>
+<div>return pandas.read_csv(hpath+’/analysis/AllExtantData.dat’,sep=’t’)</div></blockquote>
+<p># for reading AllDestroyedData:
+def read(hpath):</p>
+<blockquote>
+<div>return pandas.read_csv(hpath+’/analysis/AllDestroyedData.dat’,sep=’t’)</div></blockquote>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<p>Alternatively, you can access the data through our <cite>MTanalysis3</cite> modules which contains some extra functionality. Make sure you have obtained access to the Caterpillar modules from the git repository and that you are using <a href="#id9"><span class="problematic" id="id10">`</span></a>MTanalysis3’ to load the destroyed/extant catalogues.</p>
+<p><a href="#id11"><span class="problematic" id="id12">``</span></a><a href="#id13"><span class="problematic" id="id14">`</span></a>python
+import MTanalysis3 as mta
+import numpy as np
+import haloutils as htils</p>
+<p>hpath = htils.get_paper_paths_lx(14)[0]</p>
+<p>AD = mta.AllDestroyedData()
+AE = mta.AllExtantData()</p>
+<p>dataE = AE.read(hpath) # all the extant (surviving) halo information along their history
+dataD = AD.read(hpath) # all the destroyed halo information along their history</p>
+<p># we also have carried out 5% most bound tagging of the particles at infall</p>
+<p>idsE = mta.load_idsE(hpath) # all tagged particles in extant list
+idsD = mta.load_idsD(hpath) # all tagged particles in destroyed list</p>
+<p>stars_a = mta.getStars(dataE,idsE,row=10) # particle ids tagged in particular halo
+stars_b = mta.getStars(dataD,idsD,row=25) # particle ids tagged in particular halo</p>
+<p>mper_a = mta.mass_per_particle(hpath,dataE,row=10) # stellar mass per particle of particular halo
+mper_b = mta.mass_per_particle(hpath,dataD,row=25) # stellar mass per particle of particular halo
+<a href="#id15"><span class="problematic" id="id16">``</span></a><a href="#id17"><span class="problematic" id="id18">`</span></a></p>
+</div>
+<div class="section" id="other-available-datasets">
+<h2>Other Available Datasets<a class="headerlink" href="#other-available-datasets" title="Permalink to this headline">¶</a></h2>
+<p>To be added soon.</p>
+<p>This will include:</p>
+<ul class="simple">
+<li>minihalo catalogues: properties of minihalos, i.e. halos which first go above \(T_{vir}sim2000\)K etc.</li>
+<li>first galaxy catalogues: properties of first galaxies, i.e. halos which first go above \(T_{vir}sim10,000\)K etc.</li>
+</ul>
+<p>… more soon.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Caterpillar Collaboration.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

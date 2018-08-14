@@ -1,0 +1,464 @@
+consistent-trees
+========================
+
+Overview
+--------
+
+The code's paper can be found `here <http://arxiv.org/abs/1110.4370>`__.
+Documentation on getting it running and a more exhaustive documentation
+of the catalogue's content at its `Bitbucket
+Repository <https://bitbucket.org/pbehroozi/consistent-trees>`__.
+
+Catalogue Parameters
+--------------------
+
+The consistent-trees output it similar to that of the rockstar catalogue
+except now there are additional paramters which connect the halos in
+time.
+
+.. raw:: html
+
+   <center>
+
++--------+--------+------+
+| variab | units  | defi |
+| le     |        | niti |
+|        |        | on   |
++========+========+======+
+| ``id`` | -      | id   |
+|        |        | of   |
+|        |        | the  |
+|        |        | halo |
+|        |        | in   |
+|        |        | the  |
+|        |        | merg |
+|        |        | er   |
+|        |        | tree |
++--------+--------+------+
+| ``pid` | -      | the  |
+| `      |        | next |
+|        |        | leve |
+|        |        | l    |
+|        |        | up   |
+|        |        | halo |
+|        |        | if   |
+|        |        | the  |
+|        |        | halo |
+|        |        | is a |
+|        |        | subh |
+|        |        | alo  |
+|        |        | (oth |
+|        |        | erwi |
+|        |        | se   |
+|        |        | -1)  |
++--------+--------+------+
+| ``upid | -      | the  |
+| ``     |        | ID   |
+|        |        | of   |
+|        |        | the  |
+|        |        | uppe |
+|        |        | rmos |
+|        |        | t    |
+|        |        | leve |
+|        |        | l    |
+|        |        | of   |
+|        |        | the  |
+|        |        | halo |
+|        |        | if   |
+|        |        | the  |
+|        |        | halo |
+|        |        | is a |
+|        |        | subh |
+|        |        | alo  |
+|        |        | (oth |
+|        |        | erwi |
+|        |        | se   |
+|        |        | -1)  |
++--------+--------+------+
+| ``bfid | -      | brea |
+| ``     |        | dth  |
+|        |        | firs |
+|        |        | t    |
+|        |        | orde |
+|        |        | r    |
+|        |        | id   |
++--------+--------+------+
+| ``dfid | -      | dept |
+| ``     |        | h    |
+|        |        | firs |
+|        |        | t    |
+|        |        | orde |
+|        |        | r    |
+|        |        | id   |
++--------+--------+------+
+| ``orig | -      | orig |
+| id``   |        | inal |
+|        |        | id   |
+|        |        | as   |
+|        |        | iden |
+|        |        | tifi |
+|        |        | ed   |
+|        |        | in   |
+|        |        | Rock |
+|        |        | star |
+|        |        | cata |
+|        |        | logu |
+|        |        | e    |
++--------+--------+------+
+| ``last | -      | last |
+| prog_d |        | prog |
+| fid``  |        | enit |
+|        |        | or   |
+|        |        | dept |
+|        |        | h    |
+|        |        | firs |
+|        |        | t    |
+|        |        | id   |
++--------+--------+------+
+| ``snap | -      | snap |
+| ``     |        | shot |
++--------+--------+------+
+| ``scal | -      | scal |
+| e``    |        | e    |
+|        |        | fact |
+|        |        | or   |
++--------+--------+------+
+| ``desc | -      | desc |
+| _id``  |        | enda |
+|        |        | nt   |
+|        |        | id   |
++--------+--------+------+
+| ``num_ | -      | numb |
+| prog`` |        | er   |
+|        |        | of   |
+|        |        | prog |
+|        |        | enit |
+|        |        | ors  |
++--------+--------+------+
+| ``phan | -      | Nonz |
+| tom``  |        | ero  |
+|        |        | if   |
+|        |        | the  |
+|        |        | halo |
+|        |        | is a |
+|        |        | "pha |
+|        |        | ntom |
+|        |        | "    |
+|        |        | halo |
+|        |        | ,    |
+|        |        | i.e. |
+|        |        | a    |
+|        |        | halo |
+|        |        | not  |
+|        |        | foun |
+|        |        | d    |
+|        |        | by   |
+|        |        | Rock |
+|        |        | star |
+|        |        | but  |
+|        |        | inse |
+|        |        | rted |
+|        |        | by   |
+|        |        | cons |
+|        |        | iste |
+|        |        | nt-t |
+|        |        | rees |
+|        |        | to   |
+|        |        | link |
+|        |        | time |
+|        |        | step |
+|        |        | s    |
++--------+--------+------+
+| ``sam_ | Msol/h | smoo |
+| mvir`` |        | thed |
+|        |        | viri |
+|        |        | al   |
+|        |        | mass |
++--------+--------+------+
+| ``mvir | Msol/h | viri |
+| ``     |        | al   |
+|        |        | mass |
+|        |        | (Bri |
+|        |        | an   |
+|        |        | &    |
+|        |        | Norm |
+|        |        | an   |
+|        |        | pres |
+|        |        | crip |
+|        |        | tion |
+|        |        | )    |
+|        |        | (it  |
+|        |        | is   |
+|        |        | actu |
+|        |        | ally |
+|        |        | mgra |
+|        |        | v    |
+|        |        | from |
+|        |        | Rock |
+|        |        | star |
+|        |        | )    |
++--------+--------+------+
+| ``rvir | kpc    | viri |
+| ``     |        | al   |
+|        |        | radi |
+|        |        | us   |
+|        |        | (Bri |
+|        |        | an   |
+|        |        | &    |
+|        |        | Norm |
+|        |        | an   |
+|        |        | pres |
+|        |        | crip |
+|        |        | tion |
+|        |        | )    |
++--------+--------+------+
+| ``rs`` | kpc    | scal |
+|        |        | e    |
+|        |        | radi |
+|        |        | us   |
++--------+--------+------+
+| ``vrms | km/s   | rms  |
+| ``     |        | velo |
+|        |        | city |
++--------+--------+------+
+| ``mmp` | -      | most |
+| `      |        | mass |
+|        |        | ive  |
+|        |        | prog |
+|        |        | enit |
+|        |        | or   |
++--------+--------+------+
+| ``scal | -      | scal |
+| e_of_l |        | e    |
+| ast_MM |        | fact |
+| ``     |        | or   |
+|        |        | of   |
+|        |        | last |
+|        |        | majo |
+|        |        | r    |
+|        |        | merg |
+|        |        | er   |
++--------+--------+------+
+| ``vmax | km/s   | maxi |
+| ``     |        | mum  |
+|        |        | circ |
+|        |        | ular |
+|        |        | velo |
+|        |        | city |
++--------+--------+------+
+| ``posX | kpc    | x-po |
+| ``     |        | siti |
+|        |        | on   |
++--------+--------+------+
+| ``posY | kpc    | y-po |
+| ``     |        | siti |
+|        |        | on   |
++--------+--------+------+
+| ``posZ | kpc    | z-po |
+| ``     |        | siti |
+|        |        | on   |
++--------+--------+------+
+| ``pecV | km/s   | x-di |
+| X``    |        | r    |
+|        |        | pecu |
+|        |        | liar |
+|        |        | velo |
+|        |        | city |
++--------+--------+------+
+| ``pecV | km/s   | y-di |
+| Y``    |        | r    |
+|        |        | pecu |
+|        |        | liar |
+|        |        | velo |
+|        |        | city |
++--------+--------+------+
+| ``pecV | km/s   | z-di |
+| Z``    |        | r    |
+|        |        | pecu |
+|        |        | liar |
+|        |        | velo |
+|        |        | city |
++--------+--------+------+
+| ``Jx`` |        | x-co |
+|        |        | mpon |
+|        |        | ent  |
+|        |        | angu |
+|        |        | lar  |
+|        |        | mome |
+|        |        | ntum |
++--------+--------+------+
+| ``Jy`` |        | y-co |
+|        |        | mpon |
+|        |        | ent  |
+|        |        | angu |
+|        |        | lar  |
+|        |        | mome |
+|        |        | ntum |
++--------+--------+------+
+| ``Jz`` |        | z-co |
+|        |        | mpon |
+|        |        | ent  |
+|        |        | angu |
+|        |        | lar  |
+|        |        | mome |
+|        |        | ntum |
++--------+--------+------+
+| ``spin |        | spin |
+| ``     |        | para |
+|        |        | mete |
+|        |        | r    |
+|        |        | (Pee |
+|        |        | bles |
+|        |        | vers |
+|        |        | ion) |
++--------+--------+------+
+| ``spin |        | spin |
+| _bullo |        | para |
+| ck``   |        | mete |
+|        |        | r    |
+|        |        | (Bul |
+|        |        | lock |
+|        |        | modi |
+|        |        | fied |
+|        |        | vers |
+|        |        | ion) |
++--------+--------+------+
+| ``m200 | Msol/h | viri |
+| c_all` |        | al   |
+| `      |        | mass |
+|        |        | of   |
+|        |        | all  |
+|        |        | part |
+|        |        | icle |
+|        |        | s    |
+|        |        | base |
+|        |        | d    |
+|        |        | on   |
+|        |        | 200x |
+|        |        | crit |
+|        |        | ical |
+|        |        | dens |
+|        |        | ity  |
++--------+--------+------+
+| ``m200 | Msol/h | viri |
+| b``    |        | al   |
+|        |        | mass |
+|        |        | of   |
+|        |        | all  |
+|        |        | part |
+|        |        | icle |
+|        |        | s    |
+|        |        | base |
+|        |        | d    |
+|        |        | on   |
+|        |        | 200x |
+|        |        | back |
+|        |        | grou |
+|        |        | nd   |
+|        |        | dens |
+|        |        | ity  |
++--------+--------+------+
+| ``xoff | kpc    | Posi |
+| ``     |        | tion |
+|        |        | offs |
+|        |        | et   |
+|        |        | para |
+|        |        | mete |
+|        |        | r    |
+|        |        | abs( |
+|        |        | cent |
+|        |        | er   |
+|        |        | of   |
+|        |        | mass |
+|        |        | posi |
+|        |        | tion |
+|        |        | -    |
+|        |        | halo |
+|        |        | posi |
+|        |        | tion |
+|        |        | )    |
++--------+--------+------+
+| ``voff | kpc    | Velo |
+| ``     |        | city |
+|        |        | offs |
+|        |        | et   |
+|        |        | para |
+|        |        | mete |
+|        |        | r    |
+|        |        | abs( |
+|        |        | cent |
+|        |        | er   |
+|        |        | of   |
+|        |        | mass |
+|        |        | velo |
+|        |        | city |
+|        |        | -    |
+|        |        | halo |
+|        |        | velo |
+|        |        | city |
+|        |        | )    |
++--------+--------+------+
+| ``b_to | -      | Halo |
+| _a(500 |        | elli |
+| c)``   |        | ptic |
+|        |        | ity  |
+|        |        | b/a  |
++--------+--------+------+
+| ``c_to | -      | Halo |
+| _a(500 |        | elli |
+| c)``   |        | ptic |
+|        |        | ity  |
+|        |        | c/a  |
++--------+--------+------+
+| ``A[x] |        | x-ax |
+| (500c) |        | is   |
+| ``     |        | for  |
+|        |        | elli |
+|        |        | ptic |
+|        |        | ity  |
++--------+--------+------+
+| ``A[y] |        | y-xi |
+| (500c) |        | s    |
+| ``     |        | for  |
+|        |        | elli |
+|        |        | ptic |
+|        |        | ity  |
++--------+--------+------+
+| ``A[z] |        | z-xi |
+| (500c) |        | s    |
+| ``     |        | for  |
+|        |        | elli |
+|        |        | ptic |
+|        |        | ity  |
++--------+--------+------+
+| ``T/ab | -      | Viri |
+| s(U)`` |        | al   |
+|        |        | rati |
+|        |        | o    |
+|        |        | (kin |
+|        |        | etic |
+|        |        | /abs |
+|        |        | (pot |
+|        |        | enti |
+|        |        | al)) |
++--------+--------+------+
+
+.. raw:: html
+
+   </center>
+
+Halo Ordering
+-------------
+
+As listed in the previous table, ``consistent-trees`` outputs two
+indexes for the connecting the halos, (1) depth-first ordered or (2)
+breadth-first ordered. The graphic below indicates what the fundamental
+differences are between these two methods.
+
+.. raw:: html
+
+   <center>
+
+.. raw:: html
+
+   </center>
