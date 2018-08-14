@@ -7,6 +7,10 @@ Please refer to the Current Status and Policies page before proceeding.
 Particle Data (Gadget)
 -------------
 
+.. Warning::
+
+	Access to the particle data is by invite-only.
+
 See Data Access Examples to see how to load each of these blocks. One such way is:
 
 .. code:: python
@@ -17,9 +21,9 @@ See Data Access Examples to see how to load each of these blocks. One such way i
     blockname = "POS " # NOTE THE EXTRA SPACE!
     pos = htils.load_partblock(hpath,zoomid,blockname,partids=[listofids]) # units Mpc/h
 
-{{site.data.alerts.tip}} Make sure you include the right number of
-spaces (4) otherwise you will get an error when trying to read the
-blocks.{{site.data.alerts.end}}
+.. Alert:: 
+
+	Make sure you include the right number of spaces (4) otherwise you will get an error when trying to read the blocks.
 
 Other blocks you have access to are listed below:
 
@@ -106,6 +110,10 @@ physical. For z = 0, it doesn't matter.{{site.data.alerts.end}}
 
 Halo Catalogues (Rockstar)
 -----------
+
+.. Attention::
+ 
+	Access to the halo catalogues is currently public (accessible via MIT server).
 
 Rockstar outputs a large number of halo properties.
 
@@ -642,6 +650,10 @@ Rockstar outputs a large number of halo properties.
 
 Merger Trees (consistent-trees)
 -----------
+
+.. Attention::
+ 
+	Access to the halo catalogues is currently public (accessible via MIT server).
 
 The consistent-trees output it similar to that of the rockstar catalogue
 except now there are additional paramters which connect the halos in
